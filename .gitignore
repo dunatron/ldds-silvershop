@@ -1,0 +1,31 @@
+# ignore cache folder
+/silverstripe-cache/
+
+# ignore all environment files
+_ss_environment.php
+
+# ignore build tools
+/tools/phing-metadata
+
+# ignore composer vendor folder
+/vendor/
+/cms
+/email-helpers
+/framework
+/listsorter
+mysite/_config.php
+/omnipay
+/reports
+/silvershop
+/siteconfig
+/sqlquerylist
+/vendor
+/versioned-gridfield
+index.php
+install.php
+install-frameworkmissing.html
+web.config
+.htaccess
+favicon.ico
+.idea/
+.editorconfig

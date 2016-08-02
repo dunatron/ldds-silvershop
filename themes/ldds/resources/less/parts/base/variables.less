@@ -1,0 +1,155 @@
+
+// @media queries
+@tablet: ~"(min-width: @{screen-sm-min})";
+@normal: ~"(min-width: @{screen-md-min})";
+@wide: ~"(min-width: @{screen-lg-min})";
+
+@min460: ~"(min-width: 460px)";
+@min525:  ~"(min-width: 525px)";
+@min600:  ~"(min-width: 600px)";
+@min660:  ~"(min-width: 660px)";
+@min700:   ~"(min-width: 700px)";
+@min768:   ~"(min-width: 768px)";
+@max767:   ~"(max-width: 767px)";
+@max699:  ~"(max-width: 699px)";
+@max768:  ~"(max-width: 768px)";
+@min750:  ~"(min-width: 750px)";
+@min960:   ~"(min-width: 960px)";
+@min976:   ~"(min-width: 976px)";
+@min992:   ~"(min-width: 992px)";
+@max992:  ~"(max-width: 992px)";
+@min1100: ~"(min-width: 1100px)";
+@min1200: ~"(min-width: 1200px)";
+@min1280:  ~"(min-width: 1280px)";
+
+@color-black: #040508;
+@color-black2: #010101;
+@color-primary: #2A2A2A;
+@color-grey: #2A2A2A;
+@color-other-grey: #555;
+@color-green: #b8f701;
+@color-white: #ffffff;
+@color-text: #000000;
+@color-menu-title-bg: #fffffe;
+@color-menu-line-bg: @color-black;
+@color-banner-text: #231f20;
+@color-heading-dark: @color-text;
+@color-heading-light: @color-primary;
+@color-gray:              #a4a3a3;
+
+@color-h3-job-details: @color-text;
+@color-seperator-job-details: @color-black;
+@color-h3-heading-job-details: @color-black2;
+@color-categories-heading-job-details: @color-gray;
+@color-created-date-job-details: @color-gray;
+@color-p-job-details: @color-text;
+
+@color-seperator-moreinfo-job-details: #ffcd34;
+@color-actions-job-details: @color-text;
+
+
+// FONTS
+@font-primary: HelveticaNeue,Helvetica,sans-serif;
+
+@font-family-sans-serif:  HelveticaNeue,Helvetica,sans-serif;
+@font-family-serif:       HelveticaNeue,Helvetica,sans-serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-primary;
+
+
+/* Breakpoints */
+// (note: Content not device screen sizes should determine your breakpoints)
+@screenS: 550px; // example
+
+/* Base Colours */
+@white: #fff; // example (note: make $vars for all colors even black and white)
+@blue: #4792CE;
+@grey: #5C6373;
+@teal: #0A8BA6;
+@black: #333333;
+@transparent: transparent;
+@clear_white: rgba(255,255,255,0.6);
+@ldds-black: rgba(0,0,0,1);
+@ldds-black-fade: rgba(0,0,0,0.6);
+//Nav
+
+/* Colour assignment (from base colors above) */
+// $c_h1: $white; // example
+@c_h1: @white;
+@c_h2: @blue;
+@c_p: @black;
+@c_nav: @clear_white;
+@c_nav_text: @white;
+@c_nav_active: @blue;
+
+/* Text sizing */
+// fs = font-size
+// lh = line-height
+
+@df_lh: 1.5em;
+
+@sml_fs_h1: 25px;
+@sml_lh_h1: @df_lh;
+
+@sml_fs_h2: 14px;
+@sml_lh_h2: 22px;
+
+@sml_f_p: 14px;
+@sml_f_lh: 22px;
+
+@big_fs_h1: 19px;
+@big_lh_h1: @df_lh;
+
+@big_fs_h2: 14px;
+@big_lh_h2: 22px;
+
+@big_f_p: 14px;
+@big_f_lh: 22px;
+
+/* Fonts */
+@custom-font: 'Open Sans';
+// $proxima_nova: "proxima-nova"; // example
+
+// Font-stacks
+@system-font: "san-serif"; // replace [ADD FONT] for the system font fallback to any custom fonts being used.
+// $system-font: helvetica, "san-serif"; // example
+
+// Type kit uses weights to differentiate between fonts e.g:
+@open_regular: 400;
+@open_heavy: 700;
+// $prox_light: 300; // example
+
+// Font-stacks
+@font_stack: @custom-font, @system-font;
+// $prox_stack: $proxima_nova, $system-font; // example
+
+// Panels
+@panels-top-pad: 50px;
+@panels-bot-pad: 0;
+@panels-side-pad: 40px;
+@panel-wrap-padding: @panels-top-pad @panels-side-pad @panels-bot-pad @panels-side-pad;
+
+
+
+/* Nav Bars */
+@nav-h: 100px;
+@mob-nav-h: 15px;
+@mob-nav-w: 25px;
+@mob-nav-bar-h: 3px;
+
+/* Padding */
+// Sml (mobile) padding
+@sml-pad-sides: 15px; // 3% is a good default
+@sml-pad-top:0;
+@sml-pad-btm: 0;
+@sml-pad: @sml-pad-top @sml-pad-sides @sml-pad-btm @sml-pad-sides;
+
+@sml-padding-top: 0;
+@sml-padding-sides: 0;
+
+// Big (desktop) padding
+@big-pad-sides: 30px;
+@big-pad-top: 0;
+@big-pad-btm: 0;
+@big-pad: @big-pad-top @big-pad-sides @big-pad-btm @big-pad-sides;
