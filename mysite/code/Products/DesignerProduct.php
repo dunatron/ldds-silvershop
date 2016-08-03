@@ -25,6 +25,21 @@ class DesignerProduct extends Product {
 
     private static $min_opengraph_img_size = 0;
 
+    private static $has_one = array(
+        'DesignerImage' => 'Image'
+    );
+
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', $designerProductImage = new UploadField('DesignerImage'), 'Title');
+
+        $designerProductImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
+        $designerProductImage->setFolderName('designer-images');
+
+        return $fields;
+    }
+
 }
 
 class DesignerProduct_Controller extends Product_Controller {
