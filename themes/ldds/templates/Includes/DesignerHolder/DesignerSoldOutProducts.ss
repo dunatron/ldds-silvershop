@@ -6,14 +6,6 @@
                 <%-- ProductCategory Loop --%>
                 <% if $ClassName = 'CollectionCategory' %>
                     <% if $First %>
-                        <% if $Children %>
-                            <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
-                            <div class="product-panels-wrapper">
-                                <% loop $Children %>
-                                    <% include DesignerPanel %>
-                                <% end_loop %>
-                            </div>
-                        <% end_if %>
                     <% else %>
                         <% if $Children %>
                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
