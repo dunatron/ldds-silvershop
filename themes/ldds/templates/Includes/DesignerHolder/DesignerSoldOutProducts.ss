@@ -15,12 +15,12 @@
                             </div>
                         <% end_if %>
                     <% else %>
-                        <h1>Fuck you -> $Title</h1>
                         <% if $Children %>
-                            <h3>Child</h3>
                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
                             <div class="product-panels-wrapper sold-out">
+                                <% include StaticBanner %>
                                 <% loop $Children %>
+
                                     <% include DesignerPanel %>
                                 <% end_loop %>
                             </div>
