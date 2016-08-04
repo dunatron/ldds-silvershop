@@ -22,6 +22,10 @@
             </div>
             <div class="modal-body">
 
+                <% loop $DesignerImageSet %>
+                    <img src="$URL">
+                <% end_loop %>
+
                 <% with $Image %>
                     <img class="img-responsive" src="$URL" width="$Width" height="$Height">
                 <% end_with %>

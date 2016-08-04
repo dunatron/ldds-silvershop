@@ -12,3 +12,26 @@ SSViewer:
 SiteConfig:
   extensions:
     - LddsSiteConfig
+PaymentGateway:
+  environment:
+    'live'
+PaymentProcessor:
+  supported_methods:
+    dev:
+      - 'Cheque'
+      - 'PayPalExpress'
+    live:
+      - 'Cheque'
+      - 'PayPalExpress'
+
+PayPalGateway_Express:
+  live:
+    authentication:
+      username: 'lukedawson66_api1.gmail.com'
+      password: 'UT9NB244M5J2GSXP'
+      signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ak-RhXc3XQzmBzgo6nqMT8h8BmL-'
+  dev:
+    authentication:
+      username: 'lukedawson66_api1.gmail.com'
+      password: 'UT9NB244M5J2GSXP'
+      signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ak-RhXc3XQzmBzgo6nqMT8h8BmL-'

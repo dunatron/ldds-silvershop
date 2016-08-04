@@ -4,7 +4,7 @@
             <% if $Children %>
                     <% loop $Children %>
                         <%-- ProductCategory Loop --%>
-                        <% if $ClassName = 'ProductCategory' %>
+                        <% if $ClassName = 'CollectionCategory' %>
                             <% if $First %>
                                     <% if $Children %>
                                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>

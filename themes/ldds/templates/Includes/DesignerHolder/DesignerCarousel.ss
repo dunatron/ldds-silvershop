@@ -9,18 +9,28 @@
                     <% if $Children %>
                         <% loop $Children %>
                             <%-- ProductCategory Loop --%>
-                            <% if $ClassName = 'ProductCategory' %>
+                            <% if $ClassName = 'CollectionCategory' %>
+
                                 <% if $First %>
-                                    <% if $Children %>
-                                        <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
-                                        <% loop $Children %>
+                                        <% loop $CollectionShoot %>
                                             <div class="<% if $First%>item active<% else %>item<% end_if %>">
-                                                <% with $Image.CroppedImage(1140, 500) %>
-                                                    <img class="img-responsive" src="$URL" width="$Width" height="$Height">
-                                                <% end_with %>
+                                                    <%--<img class="img-responsive" src="$URL" width="$Width" height="$Height">--%>
+                                                <div class="slider-background-images" style="background-image:url('$URL');"></div>
+                                                <style>#preload-01 { background: url($URL) no-repeat -9999px -9999px; }</style>
                                             </div>
                                         <% end_loop %>
-                                    <% end_if %>
+
+                                    <%--<% if $Children %>--%>
+                                        <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
+                                        <%--<% loop $Children %>--%>
+                                            <%--<div class="<% if $First%>item active<% else %>item<% end_if %>">--%>
+                                                <%--<% with $Image.CroppedImage(1140, 500) %>--%>
+                                                    <%--<img class="img-responsive" src="$URL" width="$Width" height="$Height">--%>
+                                                <%--<% end_with %>--%>
+                                            <%--</div>--%>
+
+                                        <%--<% end_loop %>--%>
+                                    <%--<% end_if %>--%>
                                 <% end_if %>
                             <% end_if %>
                         <% end_loop %>

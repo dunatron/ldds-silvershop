@@ -1,23 +1,34 @@
-<%--<% loop $Menu(1) %>--%>
+<% loop $Menu(1) %>
     <%--<% if $Classnasme="LDHolder" %>--%>
-    <%--<% if $ClassName="DesignerHolder" %>--%>
-        <%--<% if $Children %>--%>
-            <%--<% loop $Children %>--%>
+    <% if $ClassName="DesignerHolder" %>
+        <% if $Children %>
+            <% loop $Children %>
                 <%-- ProductCategory Loop --%>
-                <%--<% if $ClassName = 'ProductCategory' %>--%>
-                    <%--<% if $First %>--%>
-                        <%--<% if $Children %>--%>
+                <% if $ClassName = 'CollectionCategory' %>
+                    <% if $First %>
+                        <% if $Children %>
                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
-                            <%--<div class="product-panels-wrapper">--%>
-                                <%--<% loop $Children %>--%>
-                                    <%--<% include DesignerPanel %>--%>
-                                <%--<% end_loop %>--%>
-                            <%--</div>--%>
-                        <%--<% end_if %>--%>
-                    <%--<% end_if %>--%>
-                <%--<% end_if %>--%>
-            <%--<% end_loop %>--%>
-        <%--<% end_if %>--%>
+                            <div class="product-panels-wrapper">
+                                <% loop $Children %>
+                                    <% include DesignerPanel %>
+                                <% end_loop %>
+                            </div>
+                        <% end_if %>
+                    <% else %>
+                        <h1>Fuck you -> $Title</h1>
+                        <% if $Children %>
+                            <h3>Child</h3>
+                            <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
+                            <div class="product-panels-wrapper sold-out">
+                                <% loop $Children %>
+                                    <% include DesignerPanel %>
+                                <% end_loop %>
+                            </div>
+                        <% end_if %>
+                    <% end_if %>
+                <% end_if %>
+            <% end_loop %>
+        <% end_if %>
+    <% end_if %>
     <%--<% end_if %>--%>
-    <%--<% end_if %>--%>
-<%--<% end_loop %>--%>
+<% end_loop %>
