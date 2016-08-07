@@ -19,16 +19,18 @@
                         <!--/row-fluid-->
                     </div>
                 <% end_loop %>
-                <% with $SizeChart %>
-                    <div class="item" id="collapseThree-$ID">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <img src="$URL">
+                <% if $SizeChart %>
+                    <% with $SizeChart %>
+                        <div class="item" id="collapseThree-$ID">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <img src="$URL">
+                                </div>
                             </div>
+                            <!--/row-fluid-->
                         </div>
-                        <!--/row-fluid-->
-                    </div>
-                <% end_with %>
+                    <% end_with %>
+                <% end_if %>
             </div>
             <div class="row">
                 <div class="col-md-12">
