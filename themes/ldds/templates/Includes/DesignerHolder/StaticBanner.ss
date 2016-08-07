@@ -1,5 +1,4 @@
 <div class="static-banner-wrapper">
-    <h1>STATIC BANNER FOR->$Title</h1>
     <% if $CollectionShoot %>
         <h1>Yes</h1>
         <% loop $CollectionShoot %>
