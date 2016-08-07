@@ -33,6 +33,7 @@
     </script>
     <!-- End Google Analytics -->
 
+
 </head>
 <body class="$ClassName.LowerCase $Title">
     <% include Nav %>
@@ -57,6 +58,8 @@
 <script src="$ThemeDir/js/googleajax.js"></script>
 <script src="$ThemeDir/js/bootstrap3.1.0.js"></script>
 <script src="$ThemeDir/js/menu.js"></script>
+<script src="$ThemeDir/js/jssor/jssor.slider.mini.js"></script>
+<script src="$ThemeDir/js/vertical-slider.js"></script>
 
 
 

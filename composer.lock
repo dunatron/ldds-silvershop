@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2896e0fee16834ce0c9c59a69c965312",
-    "content-hash": "5e6e85954a007c02756be6b44cf90afa",
+    "hash": "49b3e01723abd7be23a8b7b15444c29a",
+    "content-hash": "b3a426d44e92b07059f87d72f451f3d0",
     "packages": [
         {
             "name": "burnbright/silverstripe-listsorter",
@@ -1165,6 +1165,51 @@
                 "shim"
             ],
             "time": "2016-05-18 14:26:46"
+        },
+        {
+            "name": "thisisbd/silverstripe-fixjpeg-orientation",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dljoseph/silverstripe-fixjpeg-orientation.git",
+                "reference": "2ba584d8b3df6ae2e5dd713b5855ea4111fa3d4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dljoseph/silverstripe-fixjpeg-orientation/zipball/2ba584d8b3df6ae2e5dd713b5855ea4111fa3d4f",
+                "reference": "2ba584d8b3df6ae2e5dd713b5855ea4111fa3d4f",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "~3.1",
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "fixjpeg-orientation"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Darren-Lee Joseph",
+                    "email": "darrenleejoseph@gmail.com"
+                }
+            ],
+            "description": "SilverStripe Fix JPEG Orientation Module. Ensures that JPEG images uploaded from a mobile are rotated and saved upright according their orientation value for consistent viewing when displayed on a web page.",
+            "homepage": "http://github.com/thisisbd/silverstripe-fixjpeg-orientation",
+            "keywords": [
+                "exif orientation",
+                "fix image orientation",
+                "fix jpeg orientation",
+                "jpeg orientation",
+                "jpeg rotation",
+                "mobile images",
+                "silverstripe"
+            ],
+            "time": "2015-02-21 09:13:05"
         }
     ],
     "packages-dev": [

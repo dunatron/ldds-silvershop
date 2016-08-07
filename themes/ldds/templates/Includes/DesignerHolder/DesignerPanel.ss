@@ -12,28 +12,5 @@
     <%--</a>--%>
 </div>
 
-<!-- Modal -->
-<div class="modal fade designer-modal" id="designerModal-$ID" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">$Title</h4>
-            </div>
-            <div class="modal-body">
 
-                <% loop $DesignerImageSet %>
-                    <img src="$URL">
-                <% end_loop %>
-
-                <% with $Image %>
-                    <img class="img-responsive" src="$URL" width="$Width" height="$Height">
-                <% end_with %>
-            </div>
-            <div class="modal-footer">
-                <a href="$addLink" class="add-product">ADD TO CART</a>
-            </div>
-        </div>
-    </div>
-</div>
-
+<% include DesignerModal %>
