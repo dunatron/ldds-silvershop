@@ -8,9 +8,10 @@
                     <% if $First %>
                     <% else %>
                         <% if $Children %>
+                            <% include StaticBanner %>
                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
                             <div class="product-panels-wrapper sold-out">
-                                <% include StaticBanner %>
+
                                 <% loop $Children %>
 
                                     <% include DesignerPanel %>

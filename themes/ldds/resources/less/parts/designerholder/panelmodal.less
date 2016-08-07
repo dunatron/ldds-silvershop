@@ -1,7 +1,27 @@
 .designer-modal {
 
+
   .modal-dialog {
-    width: 1000px;
+    width: auto;
+  @media @min960 {
+    width: 996px;
+  }
+
+  }
+
+  .ldds-modal-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 9999;
+      .fa-times {
+        font-size: 22px;
+        color: @ldds-black !important;
+        &:hover {
+          color: @ldds-black !important;
+          cursor: pointer;
+        }
+      }
   }
 
   .modal-content {
@@ -13,7 +33,7 @@
   }
 
   .modal-body {
-    border-top: 2px solid @c_ldds_black_lite;
+    //border-top: 2px solid @c_ldds_black_lite;
 
     padding: 0;
     img {

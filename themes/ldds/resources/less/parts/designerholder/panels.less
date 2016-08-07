@@ -1,13 +1,17 @@
 .product-panels-wrapper{
+  .cf();
   padding-top: 30px;
 
 }
 
 .product-panels {
-  width: 25%;
+  width: 50%;
   float: left;
   display: inline-block;
   padding: 0 5px 10px 5px;
+  @media @min960 {
+    width: 25%;
+  }
 }
 
 .img-wrapper {

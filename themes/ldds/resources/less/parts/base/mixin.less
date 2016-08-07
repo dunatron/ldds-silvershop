@@ -7,6 +7,18 @@
   transition: @animation;
 }
 
+.show_psuedo(){
+  content: '';
+  display: block;
+}
+// Clear
+.cf(){
+  &:after{
+  .show_psuedo();
+    clear: both;
+  }
+}
+
 .link_animation() {
   .animation_animation();
 }
