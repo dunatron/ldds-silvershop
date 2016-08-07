@@ -14,11 +14,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ee3e8b">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="$ThemeDir/css/lddsmenu.css">
     <link rel="stylesheet" href="$ThemeDir/css/base-styles.css">
     <link rel="stylesheet" href="$ThemeDir/css/homepage.css">
-
     <!-- Google Analytics -->
     <script>
         var _gaq = _gaq || [];
@@ -32,8 +29,6 @@
         })();
     </script>
     <!-- End Google Analytics -->
-
-
 </head>
 <body class="$ClassName.LowerCase $Title">
     <% include Nav %>
@@ -48,20 +43,10 @@
     </div>
     <% include Footer %>
 </div>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
-<script src="$ThemeDir/js/main.js"></script>
-
 <script src="$ThemeDir/js/googleajax.js"></script>
 <script src="$ThemeDir/js/bootstrap3.1.0.js"></script>
 <script src="$ThemeDir/js/menu.js"></script>
-<script src="$ThemeDir/js/jssor/jssor.slider.mini.js"></script>
 <script src="$ThemeDir/js/vertical-slider.js"></script>
-
-
-
 </body>
 </html>

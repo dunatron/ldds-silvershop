@@ -50,6 +50,13 @@ class HomePage_Controller extends Page_Controller
         Requirements::set_force_js_to_bottom(true);
         Requirements::javascript($this->ThemeDir() . '/js/jquery.mobile.custom.min.js');
         Requirements::javascript($this->ThemeDir() . '/js/tron-swipe.js');
+        // GREEN SOCK ANIMATIONS
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js');
+        Requirements::javascript('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js');
+        Requirements::javascript($this->ThemeDir() . '/js/main.js');
+
     }
 
 }
