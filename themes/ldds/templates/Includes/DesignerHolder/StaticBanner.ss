@@ -1,6 +1,5 @@
 <div class="static-banner-wrapper">
     <% if $CollectionShoot %>
-        <h1>Yes</h1>
         <% loop $CollectionShoot %>
             <% if $First %>
                 <%--<img src="$URL" class="slider-background-images">--%>
