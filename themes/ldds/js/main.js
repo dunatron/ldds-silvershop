@@ -42,9 +42,9 @@ var tl = new TimelineLite();
 
 // Time Line ease in like magazines being strung together on a coffee table
 tl
-    .from(artPanel, 0.5, { ease:Power4.easeOut, x: -1000 })
-    .from(designerPanel, 0.5, {y: 1000, ease:Power4.easeOut}, '-=0.15')
-    .from(ldPanel, 0.5, { ease:Power4.easeOut, x: 1000 }, '-=0.15')
+    .from(artPanel, 0.75, { ease:Power4.easeOut, x: -1000 })
+    .from(designerPanel, 0.75, {y: 1000, ease:Power4.easeOut}, '-=0.15')
+    .from(ldPanel, 0.75, { ease:Power4.easeOut, x: 1000 }, '-=0.15')
     .from(socialIcons, 0.25, {y: 1000}, '-=0');
 
 
