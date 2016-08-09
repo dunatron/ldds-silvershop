@@ -26,7 +26,6 @@ class DesignerProduct extends Product {
     private static $min_opengraph_img_size = 0;
 
     private static $has_one = array(
-        'DesignerImage' => 'Image',
         'SizeChart' => 'Image'
     );
 
@@ -37,13 +36,9 @@ class DesignerProduct extends Product {
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', $designerProductImage = new UploadField('DesignerImage'), 'Title');
         $fields->addFieldToTab('Root.CollectionShoot', $designerImageSet = new UploadField('DesignerImageSet', 'Designer product Image Set'));
         $fields->addFieldToTab('Root.SizeChart', $sizeChart = new UploadField('SizeChart', 'Size Chart Image'));
-
-        $designerProductImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
-        $designerProductImage->setFolderName('designer-images');
-
+        
         $designerImageSet->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
         $designerImageSet->setFolderName('designer-images');
 
