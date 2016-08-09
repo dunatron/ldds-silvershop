@@ -29,16 +29,16 @@ var tl = new TimelineLite();
 
 
 // Two sides hit the middle and bounce a few times
-TweenLite.from(artPanel, 2.5, { ease: Bounce.easeOut, x: -1000 });
-TweenLite.from(designerPanel, 0.75, {y: 1000, delay: 0.5, ease:Power4.easeOut});
-TweenLite.from(ldPanel, 2.5, { ease: Bounce.easeOut, x: 1000 });
-TweenLite.from(socialIcons, 1, {y: 1000, delay: 0.5});
+// TweenLite.from(artPanel, 2.5, { ease: Bounce.easeOut, x: -1000 });
+// TweenLite.from(designerPanel, 0.75, {y: 1000, delay: 0.5, ease:Power4.easeOut});
+// TweenLite.from(ldPanel, 2.5, { ease: Bounce.easeOut, x: 1000 });
+// TweenLite.from(socialIcons, 1, {y: 1000, delay: 0.5});
 
 // General ease in (sides slow, middle fast)
-// TweenLite.from(artPanel, 2.5, { ease:Power4.easeOut, x: -1000 });
-// TweenLite.from(designerPanel, 1, {y: 1000, delay: 0.5, ease:Power4.easeOut});
-// TweenLite.from(ldPanel, 2.5, { ease:Power4.easeOut, x: 1000 });
-// TweenLite.from(socialIcons, 1, {y: 1000, delay: 0.5});
+TweenLite.from(artPanel, 2.5, { ease:Power4.easeOut, x: -1000 });
+TweenLite.from(designerPanel, 1, {y: 1000, delay: 0.5, ease:Power4.easeOut});
+TweenLite.from(ldPanel, 2.5, { ease:Power4.easeOut, x: 1000 });
+TweenLite.from(socialIcons, 1, {y: 1000, delay: 0.5});
 
 // Time Line ease in like magazines being strung together on a coffee table
 // tl
