@@ -12,7 +12,9 @@ class LddsSiteConfig extends DataExtension {
     private static $db = array(
         'facebook' => 'Text',
         'instagram' => 'Text',
-        'snapchat' => 'Text'
+        'snapchat' => 'Text',
+        'BasicsPolicy' => 'Text',
+        'DesignerPolicy' => 'Text'
 
     );
 
@@ -25,6 +27,12 @@ class LddsSiteConfig extends DataExtension {
         );
         $fields->addFieldToTab("Root.Main",
             new TextField("snapchat", "snapchat link")
+        );
+        $fields->addFieldToTab("Root.Main",
+            new TextField("BasicsPolicy", "Basics Policy")
+        );
+        $fields->addFieldToTab("Root.Main",
+            new TextField("DesignerPolicy", "Designer Policy")
         );
     }
 }

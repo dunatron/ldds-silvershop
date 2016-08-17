@@ -1,7 +1,7 @@
-<div class="product-panels">
+<div class="product-panels $Pos $EvenOdd">
     <div class="img-wrapper">
     <a data-toggle="modal" data-target="#designerModal-$ID">
-        <% with $Image.CroppedImage(1140, 800) %>
+        <% with $Image.CroppedImage(1140, 1600) %>
             <img class="img-responsive" src="$URL" width="$Width" height="$Height">
         <% end_with %>
     </a>
