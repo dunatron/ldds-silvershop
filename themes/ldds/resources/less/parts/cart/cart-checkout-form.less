@@ -1,0 +1,116 @@
+#CartForm_CartForm {
+  //background-color: #00b3ee;
+  display: inline;
+  .cart {
+    //background-color: green;
+    thead {
+      tr {
+        th {
+          padding: 5px;
+          @media @min768 {
+            padding: 15px;
+          }
+        }
+      }
+      //background-color: red;
+      .image-tHead {
+        display: none;
+        @media @min768 {
+          display: table-cell;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 5px;
+          @media @min768 {
+            padding: 15px;
+            font-size: 18px;
+          }
+        }
+
+      }
+      //background-color: yellow;
+      // Product Image
+      .image-tData {
+        display: none;
+        @media @min768 {
+          display: table-cell;
+        }
+        img {
+          width: 180px;
+        }
+      }
+      // Product Title
+      .prod-title-tData {
+        .product-title {
+          line-height: 14px;
+          a {
+            font-size: 14px;
+            font-family: @font_GustanBold;
+          }
+        }
+      }
+      // Product Price
+      .price-tData {
+
+      }
+      // Product Quantity
+      .quantity-tData {
+        text-align: center;
+        input {
+          width: 40px;
+          text-align: center;
+        }
+      }
+      // Product Total Price
+      .product-total-tData {
+
+      }
+      // Product Remove
+      .removeProduct-tData {
+        input {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    tfoot {
+      //background-color:blue;
+
+      th {
+        text-align: right;
+        padding: 40px 20px 0 20px;
+        @media @min768 {
+          padding: 40px 0 0 0;
+        }
+      }
+      td {
+        text-align: center;
+        padding: 40px 20px 0 20px;
+        @media @min768 {
+          padding: 40px 0 0 0;
+        }
+      }
+    }
+  }
+
+  .Actions {
+    @media @min768 {
+      display: inline-block;
+      width: 22%;
+      float: left;
+    }
+
+    #CartForm_CartForm_action_updatecart {
+      .btn_centre_out();
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      @media @min768 {
+        display: inline-block;
+      }
+    }
+  }
+}
