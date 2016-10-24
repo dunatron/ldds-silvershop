@@ -64,16 +64,15 @@
         </li>
 
         <%--CATEGORIES--%>
-        <li><a href="#">Categories</a>
-            <ul class="list-unstyled">
-                <% loop $Menu(1) %>
-                    <% if $ClassName == "ProductCategory" %>
-                        <li class="sub-nav $LinkingMode"><a href="$Link">$MenuTitle<span class="icon"></span></a></li>
-                    <% end_if %>
-
-                <% end_loop %>
-            </ul>
-        </li>
+        <%--<li><a href="#">Categories</a>--%>
+            <%--<ul class="list-unstyled">--%>
+                <%--<% loop $Menu(1) %>--%>
+                    <%--<% if $ClassName == "ProductCategory" %>--%>
+                        <%--<li class="sub-nav $LinkingMode"><a href="$Link">$MenuTitle<span class="icon"></span></a></li>--%>
+                    <%--<% end_if %>--%>
+                <%--<% end_loop %>--%>
+            <%--</ul>--%>
+        <%--</li>--%>
 
     </ul>
 </div>
