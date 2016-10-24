@@ -2,7 +2,6 @@
     <%-- Designer Carousel --%>
     <% include DesignerCarousel %>
     <% include DesignerBuyProducts %>
-    <% include DesignerSoldOutProducts %>
 </div>
 
 

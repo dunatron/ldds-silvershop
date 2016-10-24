@@ -17,10 +17,16 @@ class CollectionCategory extends ProductCategory
         'CollectionShoot' => 'Image'
     );
 
+    private static $db = array(
+        'CollectionType' => "Enum('Designer, Basic', 'Designer')"
+    );
+
     //Getting CMS Fields For our Home slides DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', new DropdownField('CollectionType', 'Collection Type',
+            $this->dbobject('CollectionType')->enumValues()), 'URLSegment');
 
         $fields->addFieldToTab('Root.CollectionShoot', $collectionImage = new UploadField('CollectionShoot', 'Collection Shoot Image'));
         $collectionImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));

@@ -1,0 +1,49 @@
+.categoryholder {
+  .container {
+    padding-top: 30px;
+  }
+
+  .main-intro {
+
+    padding: 0 0 30px 85px;
+    position: relative;
+    font-family: @font_Gustan;
+    font-size: 16px;
+    &:before {
+      .show_psuedo();
+      position: absolute;
+      left: 0;
+      height: 70px;
+      width:70px;
+      background: url(../images/svg/folder-information.svg) no-repeat;
+    }
+
+    .info {
+      font-size: 13px;
+      max-width: 550px;
+      font-family: @font_GustanLight;
+      display: block;
+    }
+  }
+
+  .designer-intro, .basics-intro, .general-intro {
+    font-family: @font_Gustan;
+    font-size: 16px;
+    small {
+      font-family: @font_GustanLight;
+      font-size: 13px;
+    }
+  }
+
+  .cat-wrapper {
+    padding: 5px 0 30px 0;
+  }
+
+  .category-link {
+    .btn_centre_out();
+    font-family: @font_GustanLight;
+    border: 1px solid @color-primary;
+    margin: 2px 0;
+    max-width: none;
+  }
+}

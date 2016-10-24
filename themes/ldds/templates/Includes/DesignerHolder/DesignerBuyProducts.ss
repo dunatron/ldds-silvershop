@@ -5,15 +5,31 @@
                     <% loop $Children %>
                         <%-- ProductCategory Loop --%>
                         <% if $ClassName = 'CollectionCategory' %>
+                            <%-- IN STORE --%>
                             <% if $First %>
                                     <% if $Children %>
                                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
                                             <div class="product-panels-wrapper">
                                                 <% loop $Children %>
                                                     <% include DesignerPanel %>
+                                                    <% include DesignerModal %>
                                                 <% end_loop %>
                                             </div>
                                     <% end_if %>
+                            <% else %>
+                                <%-- SOLD OUT --%>
+                                <% if $Children %>
+                                    <% include StaticBanner %>
+                                    <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
+                                    <div class="product-panels-wrapper sold-out">
+
+                                        <% loop $Children %>
+
+                                            <% include DesignerPanel %>
+                                            <% include SoldOutModal %>
+                                        <% end_loop %>
+                                    </div>
+                                <% end_if %>
                             <% end_if %>
                         <% end_if %>
                     <% end_loop %>

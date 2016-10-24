@@ -1,0 +1,113 @@
+.collectioncategory, .productcategory {
+  .holder-buffer {
+    padding-top: 40px;
+  }
+
+  .sorter_label {
+    font-size: 16px;
+    font-family: @font_Gustan;
+    padding: 0 10px 0 0;
+  }
+
+  .sorter_option {
+    a {
+      .btn_centre_out_small();
+    }
+  }
+
+  .add {
+    a {
+      .btn_centre_out_small();
+    }
+  }
+
+  .price {
+    font-weight: 100;
+  }
+
+  #Sidebar {
+    width: 100%;
+    float: left;
+    padding: 0;
+    @media @min992 {
+      width: 30%;
+      padding: 0 0 0 30px;
+    }
+  }
+
+  #ProductGroup {
+    width: 100%;
+    @media @min992 {
+      width: 70%;
+    }
+
+    float: left;
+    .pageTitle {
+      margin: 0 0 20px 0;
+    }
+
+    .content-wrapper {
+
+    }
+
+    .productList {
+      .cf();
+      padding: 0;
+      margin: 0 -5px;
+
+      .productItem {
+        display: inline-block;
+        padding: 0 5px;
+        width: 50%;
+        height: 290px;
+        float: left;
+        @media @min660 {
+          width: 33.33%;
+        }
+
+        .img-wrapper {
+          display: inline-block;
+          overflow: hidden;
+        }
+
+        .img-wrapper img {
+          width: 100%;
+          -webkit-transition: all .5s ease;
+          -moz-transition: all .5s ease;
+          -ms-transition: all .5s ease;
+          -o-transition: all .5s ease;
+          transition: all .5s ease;
+          vertical-align: middle;
+        }
+
+        .img-wrapper img:hover {
+          transform:scale(1.5);
+          -ms-transform:scale(1.5); /* IE 9 */
+          -moz-transform:scale(1.5); /* Firefox */
+          -webkit-transform:scale(1.5); /* Safari and Chrome */
+          -o-transform:scale(1.5); /* Opera */
+        }
+
+        .productTitle {
+          font-family: @font_GustanLight;
+          font-weight: 100;
+          font-size: 20px;
+          a {
+            color: rgba(0,0,0,0.6);
+            &:hover {
+              color: @ldds-black;
+            }
+          }
+        }
+
+        .sold-out {
+          h2 {
+            font-family: @font_GustanLight;
+            font-weight: 100;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
