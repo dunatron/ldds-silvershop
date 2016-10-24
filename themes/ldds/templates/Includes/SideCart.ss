@@ -19,7 +19,7 @@
                         <div class="image">
                             <a href="$Product.Link" title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$Title %>">
                                 <%--<% with $Product %>$Image.setWidth(125)<% end_with %>--%>
-                                <% with $Product %>$Image.CroppedImage(125, 80)<% end_with %>
+                                <% with $Product %>$Image.CroppedImage(180, 180)<% end_with %>
 
                             </a>
                         </div>
