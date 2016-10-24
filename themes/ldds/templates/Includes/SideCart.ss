@@ -18,9 +18,7 @@
                     <% if $Product.Image %>
                         <div class="image">
                             <a href="$Product.Link" title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$Title %>">
-                                <%--<% with $Product %>$Image.setWidth(125)<% end_with %>--%>
-                                <% with $Product %>$Image.CroppedImage(280, 280)<% end_with %>
-
+                                <% with $Product %>$Image.setWidth(125)<% end_with %>
                             </a>
                         </div>
                     <% end_if %>
