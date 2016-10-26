@@ -35,17 +35,18 @@ class RegistrationPage_Controller extends Page_Controller
     // Submit the registration form
     function doRegister($data, $form)
     {
-        // Check for existing member emial address
-        if($member = DataObject::get_one("Member", "'Email' = '". Convert::raw2sql($data['Email']) . "'"))
-        {
-            // Set error message
-            $form->AddErrorMessage('Email', "Sorry, that email address already exists. Please choose another.", 'bad');
-            // Set form data from submitted values
-            Session::set("FormInfo.Form_RegistrationForm.data", $data);
-            // Return back to form
-            return Director::redirectBack();;
+        
+        // Check if member exists
+        $members = Member::get();
+        foreach ($members as $m){
+            if ($m->Email == Convert::raw2sql($data['Email'])){
+                $form->AddErrorMessage('Email', "Sorry, that email address already exists. Please choose another.", 'bad');
+                // Set form data from submitted values
+                Session::set("FormInfo.Form_RegistrationForm.data", $data);
+                return $this->redirectBack();
+            }
         }
-        // Otherwise create new member and log them in
+        
         $Member = new Member();
         $form->saveInto($Member);
         $Member->write();
@@ -61,12 +62,6 @@ class RegistrationPage_Controller extends Page_Controller
         }
         // Add member to user group
         $userGroup->Members()->add($Member);
-
-        // Get Profile page
-        //if($ProfilePage = DataObject::get_one('EditProfilePage'))
-        //{
-        //    return Director::redirect($ProfilePage->Link('?success=1'));
-        //}
 
         //$this->redirect('http://google.com');
         $this->redirect('account/');
