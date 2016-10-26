@@ -7,7 +7,7 @@
         <div class="product-price">
             $Price.Nice
         </div>
-        <a href="$addLink">
+        <a href="$addLink" class="ajax">
             <div class="add-to-cart">
                 <h2>ADD TO CART</h2>
             </div>

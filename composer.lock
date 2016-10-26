@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "49b3e01723abd7be23a8b7b15444c29a",
-    "content-hash": "b3a426d44e92b07059f87d72f451f3d0",
+    "hash": "1adad42c6ab7bd31ae530f4aa05c20d1",
+    "content-hash": "85a0072606ec2d13b1a4fd14efe877c6",
     "packages": [
         {
             "name": "burnbright/silverstripe-listsorter",
@@ -314,6 +314,48 @@
             "time": "2015-03-10 20:23:35"
         },
         {
+            "name": "markguinn/silverstripe-ajax",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markguinn/silverstripe-ajax.git",
+                "reference": "a58683bd31056fa3306adda547caefb4f24cf1d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markguinn/silverstripe-ajax/zipball/a58683bd31056fa3306adda547caefb4f24cf1d0",
+                "reference": "a58683bd31056fa3306adda547caefb4f24cf1d0",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "ajax"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Guinn",
+                    "email": "mark@adaircreative.com",
+                    "homepage": "http://github.com/markguinn"
+                }
+            ],
+            "description": "Foundational ajax support for Silverstripe CMS: push/pull server-side regions, trigger client-side events, modals, status messages.",
+            "keywords": [
+                "ajax",
+                "events",
+                "javascript",
+                "regions",
+                "silverstripe"
+            ],
+            "time": "2014-10-30 20:13:59"
+        },
+        {
             "name": "markguinn/silverstripe-email-helpers",
             "version": "1.2.1",
             "source": {
@@ -361,6 +403,52 @@
                 "smtp"
             ],
             "time": "2016-04-21 14:28:52"
+        },
+        {
+            "name": "markguinn/silverstripe-shop-ajax",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markguinn/silverstripe-shop-ajax.git",
+                "reference": "48f12bfc7016e00927b64975609c972b538e6805"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markguinn/silverstripe-shop-ajax/zipball/48f12bfc7016e00927b64975609c972b538e6805",
+                "reference": "48f12bfc7016e00927b64975609c972b538e6805",
+                "shasum": ""
+            },
+            "require": {
+                "burnbright/silverstripe-shop": "~1.0",
+                "markguinn/silverstripe-ajax": "~1.0.0",
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "shop_ajax"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Guinn",
+                    "email": "mark@adaircreative.com",
+                    "homepage": "http://github.com/markguinn"
+                }
+            ],
+            "description": "Ajax functionality for burnbright/silverstripe-shop",
+            "keywords": [
+                "ajax",
+                "ecommerce",
+                "events",
+                "javascript",
+                "regions",
+                "shop",
+                "silverstripe"
+            ],
+            "time": "2016-02-18 12:30:21"
         },
         {
             "name": "omnipay/common",
@@ -863,12 +951,12 @@
             "version": "3.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe-labs/silverstripe-reports.git",
+                "url": "https://github.com/silverstripe/silverstripe-reports.git",
                 "reference": "1d8f3b0c7cf7013a65087b569a130d3a8d1297b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-reports/zipball/1d8f3b0c7cf7013a65087b569a130d3a8d1297b7",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-reports/zipball/1d8f3b0c7cf7013a65087b569a130d3a8d1297b7",
                 "reference": "1d8f3b0c7cf7013a65087b569a130d3a8d1297b7",
                 "shasum": ""
             },

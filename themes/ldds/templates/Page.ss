@@ -14,8 +14,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ee3e8b">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="$ThemeDir/css/base-ajax.css">
     <link rel="stylesheet" href="$ThemeDir/css/base-styles.css">
     <link rel="stylesheet" href="$ThemeDir/css/homepage.css">
+
     <!-- Google Analytics -->
     <script>
         var _gaq = _gaq || [];
@@ -48,5 +50,6 @@
 <script src="$ThemeDir/js/bootstrap3.1.0.js"></script>
 <script src="$ThemeDir/js/menu.js"></script>
 <script src="$ThemeDir/js/vertical-slider.js"></script>
+<script src="$ThemeDir/js/base-ajax.js"></script>
 </body>
 </html>

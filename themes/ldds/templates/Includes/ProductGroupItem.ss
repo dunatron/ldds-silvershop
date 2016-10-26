@@ -28,7 +28,7 @@
         <% else %>
             <% if $canPurchase %>
                 <div class="add">
-                    <a href="$addLink"
+                    <a href="$addLink" class="ajax"
                        title="<%t Product.AddToCartTitle "Add &quot;{Title}&quot; to your cart" Title=$Title %>">
                         <%t Product.AddToCart "Add to Cart" %>
                     </a>

@@ -1,0 +1,24 @@
+---
+Name: shopajax
+---
+ShoppingCart_Controller:
+  extensions:
+    - ShoppingCartAjax
+VariationForm:
+  extensions:
+    - ShoppingCartAjax
+    - AjaxControllerExtension
+    - ViewableCart
+AddProductForm:
+  extensions:
+    - ShoppingCartAjax
+    - AjaxControllerExtension
+    - ViewableCart
+CartForm:
+  extensions:
+    - ShoppingCartAjax
+    - AjaxControllerExtension
+    - ViewableCart
+CartPage_Controller:
+  extensions:
+    - ShoppingCartAjax

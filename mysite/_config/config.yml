@@ -13,6 +13,12 @@ SiteConfig:
   extensions:
     - LddsSiteConfig
 ---
+Name: ajaxextensions
+---
+Controller:
+  extensions:
+    - AjaxControllerExtension
+---
 Name: payment
 ---
 Payment:
