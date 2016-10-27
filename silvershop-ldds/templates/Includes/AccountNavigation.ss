@@ -1,4 +1,4 @@
-<div class="accountnav">
+<div class="container holder-buffer accountnav">
 
     <div class="nav">
 
