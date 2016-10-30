@@ -32,6 +32,9 @@ GatewayInfo:
       password: 'UT9NB244M5J2GSXP'
       signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ak-RhXc3XQzmBzgo6nqMT8h8BmL-'
       testMode: false
+
+ShopGoogleAnalytics:
+  web_property_id: UA-XXXXXX-X
 #---
 #Name: payment
 #---

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1adad42c6ab7bd31ae530f4aa05c20d1",
-    "content-hash": "85a0072606ec2d13b1a4fd14efe877c6",
+    "hash": "46da1c76441f3428d648abc355cfd9bb",
+    "content-hash": "5459a8916b31b355c3360bb5d34b3d90",
     "packages": [
         {
             "name": "burnbright/silverstripe-listsorter",
@@ -45,6 +45,50 @@
                 "sortable"
             ],
             "time": "2014-08-29 03:21:00"
+        },
+        {
+            "name": "burnbright/silverstripe-shop-googleanalytics",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/burnbright/silverstripe-shop-googleanalytics.git",
+                "reference": "568de784055cd9b1617af20dd490c6caab3cdae3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/burnbright/silverstripe-shop-googleanalytics/zipball/568de784055cd9b1617af20dd490c6caab3cdae3",
+                "reference": "568de784055cd9b1617af20dd490c6caab3cdae3",
+                "shasum": ""
+            },
+            "require": {
+                "burnbright/silverstripe-shop": "~1.0",
+                "silverstripe/cms": "~3.1",
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "shop_googleanalytics"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Shipman",
+                    "email": "jeremy@burnbright.net",
+                    "homepage": "https://github.com/jedateach",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integrate SilverStripe shop sales with google analytics.",
+            "keywords": [
+                "analytics",
+                "google",
+                "shop",
+                "silverstripe"
+            ],
+            "time": "2015-07-21 16:05:01"
         },
         {
             "name": "burnbright/silverstripe-sqlquerylist",
