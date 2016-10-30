@@ -7,11 +7,14 @@
         <div class="product-price">
             $Price.Nice
         </div>
-        <a href="$addLink" class="ajax">
-            <div class="add-to-cart">
+        <div class="add-product-message">
+            <span>$Title Product has been added to the <a href="{$AbsoluteBaseURL}cart">Cart</a> </span><span class="close-message close">x</span>
+        </div>
+        <div class="add-to-cart">
+            <a href="$addLink" class="ajax add-product">
                 <h2>ADD TO CART</h2>
-            </div>
-        </a>
+            </a>
+        </div>
         <div id="accordion-$ID" role="tablist" aria-multiselectable="true" class="product-table-wrapper">
             <div class="panel panel-default">
                 <a data-toggle="collapse" data-parent="#accordion-$ID" href="#collapseOne-$ID" aria-expanded="true"

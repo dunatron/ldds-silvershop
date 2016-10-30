@@ -52,5 +52,6 @@
 <script src="$ThemeDir/js/vertical-slider.js"></script>
 <script src="$ThemeDir/js/base-ajax.js"></script>
 <script src="$ThemeDir/js/billing-same-as-shipping.js"></script>
+<script src="$ThemeDir/js/add-to-cart-message.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <% require themedCSS(checkout,shop) %>
 <div class="container holder-buffer">
-    <h1 class="pageTitle">$Title -Tron</h1>
+    <h1 class="pageTitle">$Title</h1>
     <div id="Checkout">
         <div class="typography">
 
@@ -17,7 +17,8 @@
         </div>
         <% if $Cart %>
             <% with $Cart %>
-                <% include Cart ShowSubtotals=true %>
+                <%--<% include Cart ShowSubtotals=true %>--%>
+                <% include CheckoutCart ShowSubtotals=true %>
             <% end_with %>
             $OrderForm
         <% else %>

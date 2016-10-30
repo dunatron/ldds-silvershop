@@ -13,7 +13,9 @@
 		"thisisbd/silverstripe-fixjpeg-orientation": "*",
 		"markguinn/silverstripe-shop-ajax": "^1.1",
 		"markguinn/silverstripe-ajax": "^1.0",
-		"burnbright/silverstripe-shop-googleanalytics": "^1.1"
+		"burnbright/silverstripe-shop-googleanalytics": "^1.1",
+		"silvershop/coloredvariations": "dev-master",
+		"bummzack/silverstripe-omnipay-ui": "^0.1.1"
 
 	},
 	"require-dev": {

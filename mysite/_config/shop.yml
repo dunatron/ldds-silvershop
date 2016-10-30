@@ -58,6 +58,8 @@ Order:
   # Change / add order status, added Refunded
   db:
     Status: Enum('Unpaid,Paid,Processing,Refunded,Sent,Complete,AdminCancelled,MemberCancelled,Cart','Cart')
+  extensions:
+      - PayableUIExtension
 
 OrderManipulation:
   allow_cancelling: true

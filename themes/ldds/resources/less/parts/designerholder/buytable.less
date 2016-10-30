@@ -46,4 +46,31 @@
     }
 
   }
+
+  .add-product-message {
+    color: @color-green;
+    height: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity .70s linear, all 0.5s;
+    position: relative;
+
+    a {
+      color: @color-green;
+    }
+    .close {
+      color: @color-red;
+      position: absolute;
+      right: 0;
+      top:0;
+    }
+  }
+  .add-product-message.show{
+    visibility: visible;
+    opacity: 1;
+    padding: 15px 0;
+    height: auto;
+    transition: visibility 0.5s, opacity .70s linear, all 0.5s;
+  }
 }

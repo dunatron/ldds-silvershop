@@ -4,9 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46da1c76441f3428d648abc355cfd9bb",
-    "content-hash": "5459a8916b31b355c3360bb5d34b3d90",
+    "hash": "2eab7915dafdc9d3c3154c788a8ddca2",
+    "content-hash": "c4bacb818856acbf31d8906decf586e5",
     "packages": [
+        {
+            "name": "bummzack/silverstripe-omnipay-ui",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bummzack/silverstripe-omnipay-ui.git",
+                "reference": "61834a7253145f05bdd0d5a4b3bc6dc3d07c8b07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bummzack/silverstripe-omnipay-ui/zipball/61834a7253145f05bdd0d5a4b3bc6dc3d07c8b07",
+                "reference": "61834a7253145f05bdd0d5a4b3bc6dc3d07c8b07",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/silverstripe-omnipay": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "omnipay-ui"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "SilverStripe Omnipay UI Module",
+            "keywords": [
+                "omnipay",
+                "payment",
+                "silverstripe"
+            ],
+            "time": "2016-07-06 16:38:38"
+        },
         {
             "name": "burnbright/silverstripe-listsorter",
             "version": "2.0.1",
@@ -776,6 +812,42 @@
             "time": "2016-06-06 09:09:37"
         },
         {
+            "name": "silvershop/coloredvariations",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silvershop/silvershop-coloredvariations.git",
+                "reference": "298fcac04b7c82ccd3bad450e088e5752f703f93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silvershop/silvershop-coloredvariations/zipball/298fcac04b7c82ccd3bad450e088e5752f703f93",
+                "reference": "298fcac04b7c82ccd3bad450e088e5752f703f93",
+                "shasum": ""
+            },
+            "require": {
+                "silvershop/core": "*",
+                "silverstripe-australia/gridfieldextensions": "*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "silvershop-coloredvariations"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD2"
+            ],
+            "description": "Add color support to variations for SilverShop.",
+            "keywords": [
+                "color",
+                "comparison",
+                "ecommerce",
+                "shop",
+                "silverstripe"
+            ],
+            "time": "2016-03-02 23:54:16"
+        },
+        {
             "name": "silvershop/core",
             "version": "2.1.1",
             "source": {
@@ -849,6 +921,59 @@
                 "silverstripe"
             ],
             "time": "2016-10-21 07:41:25"
+        },
+        {
+            "name": "silverstripe-australia/gridfieldextensions",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git",
+                "reference": "a4d15e4ca428b3a8c96e085a7caaeb25c1f737fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/a4d15e4ca428b3a8c96e085a7caaeb25c1f737fe",
+                "reference": "a4d15e4ca428b3a8c96e085a7caaeb25c1f737fe",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gridfieldextensions",
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                },
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                },
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/silverstripe-australia/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2016-08-19 08:28:30"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -1767,6 +1892,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "silvershop/coloredvariations": 20,
         "phpunit/phpunit": 0
     },
     "prefer-stable": true,
