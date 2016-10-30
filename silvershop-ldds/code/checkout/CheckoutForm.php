@@ -10,6 +10,12 @@ class CheckoutForm extends Form
     {
         $this->config = $config;
         $fields = $config->getFormFields();
+
+        //$fields->add( new TextField('Tron'), 'City');
+        $fields->insertAfter(new CheckboxField('SameAddress'), 'ShippingAddressCheckoutComponent_Phone')
+            ->setTitle('Billing Address Same as Shipping address');
+//        PaymentForm_OrderForm_ShippingAddressCheckoutComponent_Phone
+
         $actions = FieldList::create(
             FormAction::create(
                 'checkoutSubmit',
@@ -56,4 +62,5 @@ class CheckoutForm extends Form
     {
         return $this->config;
     }
+
 }

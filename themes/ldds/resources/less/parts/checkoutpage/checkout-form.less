@@ -1,0 +1,109 @@
+#PaymentForm_OrderForm {
+  padding: 40px 0;
+  .hide-field {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 5s, opacity 5.5s linear;
+    display: none;
+    //transition: 1s All;
+  }
+
+  #PaymentForm_OrderForm_CustomerDetailsCheckoutComponent_FirstName_Holder {
+    .checkout_field();
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  #PaymentForm_OrderForm_CustomerDetailsCheckoutComponent_Surname_Holder {
+    .checkout_field();
+
+  }
+  #PaymentForm_OrderForm_CustomerDetailsCheckoutComponent_Email_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_Country_Holder {
+    .checkout_field();
+    select {
+      width: 100%;
+      font-size: 26px;
+      padding: 15px;
+      border-radius: 0;
+    }
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_Address_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_AddressLine2_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_City_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_State_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_PostalCode_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_ShippingAddressCheckoutComponent_Phone_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_SameAddress_Holder {
+    .checkout_field();
+    width: 100%;
+    @media @min700 {
+      width: 100%;
+      float: left;
+    }
+    padding-left: 30px;
+    height: 55px;
+  }
+
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_Country_Holder {
+    .checkout_field();
+    select {
+      width: 100%;
+      font-size: 26px;
+      padding: 15px;
+      border-radius: 0;
+    }
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_Address_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_AddressLine2_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_City_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_State_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_PostalCode_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_BillingAddressCheckoutComponent_Phone_Holder {
+    .checkout_field();
+  }
+  #PaymentForm_OrderForm_NotesCheckoutComponent_Notes_Holder {
+    .checkout_field();
+    height: auto;
+  }
+
+  // password fields
+  #MembershipCheckoutComponent_Password_Password_Holder {
+    .checkout_field();
+  }
+  #MembershipCheckoutComponent_Password_ConfirmPassword_Holder {
+    .checkout_field();
+  }
+
+  #PaymentForm_OrderForm_action_checkoutSubmit {
+    .btn_centre_out();
+    margin-left: 10px;
+  }
+
+}
