@@ -11,7 +11,7 @@ i18n:
 ShopConfig:
   base_currency: 'NZD'
   email_from: sales@myshop.com
-  receipt_subject: "Thank you for your order at www.myshop.com - Order #%d"
+  receipt_subject: "Thank you for your order at www.lukedawson.co.nz - Order #%d"
 
 ShopCurrency:
   decimal_delimiter: '.'
@@ -19,6 +19,13 @@ ShopCurrency:
 
 Product:
   global_allow_purchase: false
+  extensions:
+    - ColoredProductExtension
+
+  ProductCatalogAdmin:
+    extensions:
+    - ColoredProductAttributeAdmin
+
   # length_unit: 'M'
   # weight_unit: 'Pounds'
 
@@ -44,7 +51,7 @@ ShoppingCart_Controller:
 
 CheckoutConfig:
   member_creation_enabled: true
-  membership_required: true
+  membership_required: false
 
 Order:
   modifiers:
