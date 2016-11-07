@@ -18,6 +18,20 @@ Name: ajaxextensions
 Controller:
   extensions:
     - AjaxControllerExtension
+#---
+#Name: payment
+#---
+#Payment:
+#  file_logging: 1
+#  allowed_gateways:
+#    - 'PayPal_Express'
+#GatewayInfo:
+#  PayPal_Express:
+#    parameters:
+#      username: 'lukedawson66_api1.gmail.com'
+#      password: 'UT9NB244M5J2GSXP'
+#      signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ak-RhXc3XQzmBzgo6nqMT8h8BmL-'
+#      testMode: false
 ---
 Name: payment
 ---
@@ -28,10 +42,10 @@ Payment:
 GatewayInfo:
   PayPal_Express:
     parameters:
-      username: 'lukedawson66_api1.gmail.com'
-      password: 'UT9NB244M5J2GSXP'
-      signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31Ak-RhXc3XQzmBzgo6nqMT8h8BmL-'
-      testMode: false
+      username: 'heath.dunlop.hd-facilitator_api1.gmail.com'
+      password: 'HJCC5J6F5ZPK59L9'
+      signature: 'An5ns1Kso7MWUdW4ErQKJJJ4qi4-AXnXrOKnj122D7tBm...MNeeqPaa'
+      testMode: true
 
 ShopGoogleAnalytics:
   web_property_id: UA-XXXXXX-X
