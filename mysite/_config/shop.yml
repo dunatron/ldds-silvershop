@@ -53,10 +53,22 @@ CheckoutConfig:
   member_creation_enabled: true
   membership_required: false
 
+CheckoutPage:
+    steps:
+        'membership': 'CheckoutStep_Membership'
+        'contactdetails': 'CheckoutStep_ContactDetails'
+        'shippingaddress': 'CheckoutStep_Address'
+        'billingaddress': 'CheckoutStep_Address'
+        'shippingmethod': 'CheckoutStep_ShippingMethod' #extra line for shipping method
+        'paymentmethod': 'CheckoutStep_PaymentMethod'
+        'summary': 'CheckoutStep_Summary'
+
 Order:
   modifiers:
     - 'FlatTaxModifier'
     - 'SimpleShippingModifier'
+    - 'ShippingFrameworkModifier'
+
   cancel_before_payment: false
   cancel_before_processing: false
   cancel_before_sending: false

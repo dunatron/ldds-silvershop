@@ -8,6 +8,7 @@
 	<% if $Content %>
 		$Content
 	<% end_if %>
+	<% include ShippingEstimator %>
 </div>
 <% if $Cart %>
 
