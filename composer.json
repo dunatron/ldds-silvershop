@@ -15,7 +15,9 @@
 		"markguinn/silverstripe-ajax": "^1.0",
 		"burnbright/silverstripe-shop-googleanalytics": "^1.1",
 		"silvershop/coloredvariations": "dev-master",
-		"bummzack/silverstripe-omnipay-ui": "^0.1.1"
+		"bummzack/silverstripe-omnipay-ui": "^0.1.1",
+		"silvershop/geocoding": "2.0.0",
+		"silvershop/shipping": "0.2.1"
 
 	},
 	"require-dev": {
