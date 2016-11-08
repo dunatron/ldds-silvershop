@@ -19,7 +19,7 @@
             <% if $InternalItemID %><p><%t Product.Code "Product Code" %> : {$InternalItemID}</p><% end_if %>
             <% if $Model %><p><%t Product.Model "Model" %> : $Model.XML</p><% end_if %>
             <% if $Size %><p><%t Product.Size "Size" %> : $Size.XML</p><% end_if %>
-            <% include ColorSwatches %>
+            <%--<% include ColorSwatches %>--%>
             <% if $PriceRange %>
                 <div class="price">
                     <strong class="value">$PriceRange.Min.Nice</strong>
