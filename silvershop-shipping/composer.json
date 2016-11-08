@@ -1,0 +1,16 @@
+{
+	"name": "silvershop/shipping",
+	"description": "Shipping methods for the SilverShop.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "ecommerce", "shop", "shipping", "freight", "silvershop"],
+	"license": "BSD2",
+	"extra": {
+		"installer-name": "silvershop-shipping"
+	},
+	"require": {
+        "silvershop/core": "~1.0 || ~2.0",
+		"silvershop/geocoding": "~2.0",
+		"silverstripe-australia/gridfieldextensions": "~1.0",
+		"burnbright/silverstripe-hasonefield": "dev-master"
+	}
+}

@@ -1,0 +1,31 @@
+#ShippingEstimateForm_ShippingEstimateForm{
+	margin-top: 10px;
+}
+#ShippingEstimateForm_ShippingEstimateForm .field,
+#ShippingEstimateForm_ShippingEstimateForm .middleColumn,
+#ShippingEstimateForm_ShippingEstimateForm .Actions,
+#ShippingEstimateForm_ShippingEstimateForm label,
+#ShippingEstimateForm_ShippingEstimateForm fieldset,
+#ShippingEstimateForm_ShippingEstimateForm input,
+#ShippingEstimateForm_ShippingEstimateForm select{
+	display:inline-block;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#ShippingEstimateForm_ShippingEstimateForm .field{
+	display:inline-block;
+	margin-right: 5px;
+}
+
+#ShippingEstimateForm_ShippingEstimateForm label{
+	margin-right:10px;
+}
+
+select#ShippingEstimateForm_ShippingEstimateForm_Country,
+select#ShippingEstimateForm_ShippingEstimateForm_State{
+	width: 12em;
+}
+#ShippingEstimateForm_ShippingEstimateForm_PostalCode{
+	width: 6em;
+}

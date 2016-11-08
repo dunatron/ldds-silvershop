@@ -1,0 +1,14 @@
+---
+Name: silvershop-shipping
+After: silvershop/*
+---
+
+PopulateShopTask:
+  extensions:
+    - PopulateShopTableShippingTask
+Order:
+  extensions:
+    - OrderShippingExtension
+CartPage_Controller:
+  extensions:
+    - CartPageShippingExtension

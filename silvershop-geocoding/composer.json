@@ -1,0 +1,15 @@
+{
+	"name": "silvershop/geocoding",
+	"description": "Geocoding support for SilverShop.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "ecommerce", "shop", "geocoding", "address", "ip"],
+	"license": "BSD2",
+	"extra": {
+		"installer-name": "silvershop-geocoding"
+	},
+	"require": {
+		"silvershop/core": "*",
+		"betterbrief/silverstripe-googlemapfield": "~1.2",
+		"willdurand/geocoder": "~2.8.0"
+	}
+}

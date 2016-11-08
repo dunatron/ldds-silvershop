@@ -25,6 +25,13 @@ class LDProduct extends Product {
 
     private static $min_opengraph_img_size = 0;
 
+    private static $can_be_root = false;
+
+    static $defaults = array (
+        'ShowInMenus' => true,
+        'ShowInSearch' => true
+    );
+
 }
 
 class LDProduct_Controller extends Product_Controller {
