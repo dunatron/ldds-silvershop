@@ -56,6 +56,7 @@ body {
 }
 .holder-buffer {
   padding-top: 25px;
+  position: relative;
 }
 
 .onboard-strip {
@@ -366,6 +367,34 @@ form {
   }
 
 
+}
+
+.black-right-bg {
+  position: absolute;
+  background-color: @ldds-black;
+  z-index: -10;
+  margin-left: 50%;
+  right:10px;
+  height: 100%;
+  width: 50%;
+  @media @min700 {
+    width: 64%;
+  }
+  @media @min960 {
+    width: 50%;
+  }
+}
+
+.collection-title {
+  margin-top: 30px;
+}
+
+.end-collection {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 1px;
+  background-color: @ldds-black;
 }
 
 

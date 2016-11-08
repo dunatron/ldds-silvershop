@@ -10,27 +10,19 @@
 
             <div class="carousel-inner">
                 <% loop $DesignerImageSet %>
+
                     <div class="item<% if $First %> active<% end_if %>">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <img src="$URL">
+                                <% with $Me.SetRatioSize(600,950) %>
+                                    <img class="img-responsive" src="$URL" width="$Width" height="$Height">
+                                <% end_with %>
+                                <%--$Me.SetRatioSize(80,80)--%>
                             </div>
                         </div>
                         <!--/row-fluid-->
                     </div>
                 <% end_loop %>
-                <% if $SizeChart %>
-                    <% with $SizeChart %>
-                        <div class="item" id="collapseThree-$ID">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <img src="$URL">
-                                </div>
-                            </div>
-                            <!--/row-fluid-->
-                        </div>
-                    <% end_with %>
-                <% end_if %>
             </div>
             <div class="row">
                 <div class="col-md-12">

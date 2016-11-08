@@ -6,14 +6,27 @@
         <div class="breadcrumbs">$Breadcrumbs</div>
         <div class="productDetails">
 
-
-            <% if $Image %>
-                <% with $Image.SetRatioSize(720,720) %>
+            <%-- if ImageSet Loop Product Image Set --%>
+            <% if $DesignerImageSet %>
+                <% include ProductSlider %>
+                <%-- else if $Image --%>
+                <% else_if $Image %>
+                <% with $Image.SetRatioSize(620,620) %>
                     <img class="productImage img-responsive" src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>" />
                 <% end_with %>
+                <%-- Else render no image text --%>
             <% else %>
                 <div class="noimage"><%t Product.NoImage "no image" %></div>
             <% end_if %>
+
+
+            <%--<% if $Image %>--%>
+                <%--<% with $Image.SetRatioSize(620,620) %>--%>
+                    <%--<img class="productImage img-responsive" src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>" />--%>
+                <%--<% end_with %>--%>
+            <%--<% else %>--%>
+                <%--<div class="noimage"><%t Product.NoImage "no image" %></div>--%>
+            <%--<% end_if %>--%>
 
 
             <% if $InternalItemID %><p><%t Product.Code "Product Code" %> : {$InternalItemID}</p><% end_if %>
@@ -21,7 +34,7 @@
             <% if $Size %><p><%t Product.Size "Size" %> : $Size.XML</p><% end_if %>
             <%--<% include ColorSwatches %>--%>
             <% if $PriceRange %>
-                <div class="price">
+                <div class="price" style="width: 100%;">
                     <strong class="value">$PriceRange.Min.Nice</strong>
                     <% if $PriceRange.HasRange %>
                         - <strong class="value">$PriceRange.Max.Nice</strong>
@@ -30,7 +43,7 @@
                 </div>
             <% else %>
                 <% if $Price %>
-                    <div class="price">
+                    <div class="price" style="width: 100%;">
                         <strong class="value">$Price.Nice</strong> <span class="currency">$Price.Currency</span>
                     </div>
                 <% end_if %>

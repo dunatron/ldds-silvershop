@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "89b9a0c61bfd60ed0f395d20d49d57b6",
-    "content-hash": "6c7be1598aa7bd9800bc158eb395c16f",
+    "hash": "42a177cf86d4ceba3519268f28317f08",
+    "content-hash": "32b59957fd55f5c75d5087e67c02dfd4",
     "packages": [
         {
             "name": "betterbrief/silverstripe-googlemapfield",
@@ -1624,6 +1624,42 @@
                 "silverstripe"
             ],
             "time": "2015-02-21 09:13:05"
+        },
+        {
+            "name": "unclecheese/betterbuttons",
+            "version": "1.2.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
+                "reference": "8144382cfd8e457ec62c680663b7056eb5e85491"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/8144382cfd8e457ec62c680663b7056eb5e85491",
+                "reference": "8144382cfd8e457ec62c680663b7056eb5e85491",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Uncle Cheese",
+                    "email": "unclecheese@leftandmain.com"
+                }
+            ],
+            "description": "Adds new form actions and buttons to GridField detail form for usability enhancements.",
+            "keywords": [
+                "buttons",
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2015-12-18 20:44:09"
         },
         {
             "name": "willdurand/geocoder",
