@@ -13,9 +13,7 @@
                                     <% if $Children %>
                                             <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
                                             <div class="product-panels-wrapper">
-                                                <div class="black-right-bg">
-
-                                                </div>
+                                                <%--<div class="black-right-bg"></div>--%>
                                                 <% loop $Children %>
                                                     <% include DesignerPanel %>
                                                     <% include DesignerModal %>
@@ -29,9 +27,7 @@
                                     <h1 class="collection-title">$Title</h1>
                                     <%-- ProductType Loop | Specify ClassName(DesignerProduct) --%>
                                     <div class="product-panels-wrapper sold-out">
-                                        <div class="black-right-bg">
-
-                                        </div>
+                                        <%--<div class="black-right-bg"></div>--%>
 
                                         <% loop $Children %>
 
