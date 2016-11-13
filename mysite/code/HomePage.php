@@ -8,13 +8,17 @@
 class HomePage extends Page
 {
 
-    private static $db = array();
+    private static $db = array(
+        'PrintPanelTitle' => 'Text',
+        'RangesPanelTitle' => 'Text',
+        'BasicsPanelTitle' => 'Text'
+    );
     private static $has_many = array();
 
     private static $has_one = array(
-        'ArtImage' => 'Image',
-        'DesignerImage' => 'Image',
-        'LDImage' => 'Image'
+        'PrintImage' => 'Image',
+        'RangesImage' => 'Image',
+        'BasicsImage' => 'Image'
     );
 
     private static $allowed_children = array(
@@ -24,10 +28,15 @@ class HomePage extends Page
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.ArtImage', $artImage = new UploadField('ArtImage', 'Art Background Image'));
-        $fields->addFieldToTab('Root.DesignerImage', $designerImage = new UploadField('DesignerImage', 'Designer Background Image'));
-        $fields->addFieldToTab('Root.LDImage', $ldImage = new UploadField('LDImage', 'LD Background Image'));
-
+        // Panel Titles
+        $fields->addFieldToTab('Root.PrintPanel', TextField::create('PrintPanelTitle', 'Title of Print Panel'));
+        $fields->addFieldToTab('Root.RangesPanel', TextField::create('RangesPanelTitle', 'Title of Ranges Panel'));
+        $fields->addFieldToTab('Root.BasicsPanel', TextField::create('BasicsPanelTitle', 'Title of Basics Panel'));
+        // Panel Images
+        $fields->addFieldToTab('Root.PrintPanel', $artImage = new UploadField('PrintImage', 'Prints Panel Background Image'));
+        $fields->addFieldToTab('Root.RangesPanel', $designerImage = new UploadField('RangesImage', 'Ranges Panel Background Image'));
+        $fields->addFieldToTab('Root.BasicsPanel', $ldImage = new UploadField('BasicsImage', 'Basics Panel Background Image'));
+        // Validate & set Upload Path
         $artImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
         $artImage->setFolderName('Panel-Images');
         $designerImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));

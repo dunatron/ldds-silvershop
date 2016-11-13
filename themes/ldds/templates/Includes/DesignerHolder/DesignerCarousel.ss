@@ -32,12 +32,14 @@
         <div class="controls-wrapper">
             <!-- Left and right controls -->
             <a class="carousel-control left-btn" href="#lddsCarousel" role="button" data-slide="next">
-                <span class="fa fa-arrow-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+                <%--<span class="fa fa-arrow-right" aria-hidden="true"></span>--%>
+                <%--<span class="sr-only">Next</span>--%>
+                <img src="$ThemeDir/images/svg/keyboard_arrow_right.svg">
             </a>
             <a class="carousel-control right-btn" href="#lddsCarousel" role="button" data-slide="prev">
-                <span class="fa fa-arrow-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+                <%--<span class="fa fa-arrow-left" aria-hidden="true"></span>--%>
+                <%--<span class="sr-only">Previous</span>--%>
+                <img src="$ThemeDir/images/svg/keyboard_arrow_left.svg">
             </a>
         </div>
     </div>
