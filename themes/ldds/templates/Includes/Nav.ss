@@ -24,10 +24,8 @@
             <a href="$AbsoluteBaseURL/cart"> <i class="fa fa-shopping-cart pull-right" aria-hidden="true"></i></a>
             <% if CurrentMember %>
                 <% loop CurrentMember %>
-                    <span>Hi $Name <a href="Security/logout"><i class="fa fa-sign-out pull-right hidden-phone"></i></a></span>
+                    <span>Hi $Name</span>
                 <% end_loop %>
-            <% else %>
-                <a href="Security/login" class="login-text"><i class="fa fa-sign-in pull-right"></i></a>
             <% end_if %>
 
         </div>
