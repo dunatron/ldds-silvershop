@@ -86,7 +86,7 @@
 										<% if $CanRemove %>
 											<strong>
 												<a class="ajaxQuantityLink" href="$removeLink" title="<%t ShoppingCart.RemoveTitle "Remove &quot;{Title}&quot; from your cart." Title=$TableTitle %>">
-													<img src="silvershop/images/remove.gif" alt="x"/>
+													<img src="silvershop-ldds/images/remove.gif" alt="x"/>
 												</a>
 											</strong>
 										<% end_if %>

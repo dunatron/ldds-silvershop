@@ -38,12 +38,12 @@
                                 <%--$RemoveField--%>
                                 <a href="$removeallLink"
                                    title="<%t ShoppingCart.RemoveAllTitle "Remove all of &quot;{Title}&quot; from your cart" Title=$TableTitle %>">
-                                    <img src="silvershop/images/remove.gif" alt="x"/>
+                                    <img src="silvershop-ldds/images/remove.gif" alt="x"/>
                                 </a>
                             <% else %>
                                 <a href="$removeallLink"
                                    title="<%t ShoppingCart.RemoveAllTitle "Remove all of &quot;{Title}&quot; from your cart" Title=$TableTitle %>">
-                                    <img src="silvershop/images/remove.gif" alt="x"/>
+                                    <img src="silvershop-ldds/images/remove.gif" alt="x"/>
                                 </a>
                             <% end_if %>
                         </div>
