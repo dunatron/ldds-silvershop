@@ -1,34 +1,22 @@
-<% require themedCSS(product,shop) %>
+<%--<% require themedCSS(product,shop) %>--%>
 <div class="container holder-buffer">
     <%-- PRODUCT --%>
     <div id="Product" class="typography">
         <h1 class="pageTitle">$Title</h1>
         <div class="breadcrumbs">$Breadcrumbs</div>
+        <%-- if ImageSet Loop Product Image Set --%>
+        <% if $DesignerImageSet %>
+            <% include ProductSlider %>
+            <%-- else if $Image --%>
+        <% else_if $Image %>
+            <% with $Image.SetRatioSize(620,620) %>
+                <img class="productImage img-responsive" src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>" />
+            <% end_with %>
+            <%-- Else render no image text --%>
+        <% else %>
+            <div class="noimage"><%t Product.NoImage "no image" %></div>
+        <% end_if %>
         <div class="productDetails">
-
-            <%-- if ImageSet Loop Product Image Set --%>
-            <% if $DesignerImageSet %>
-                <% include ProductSlider %>
-                <%-- else if $Image --%>
-                <% else_if $Image %>
-                <% with $Image.SetRatioSize(620,620) %>
-                    <img class="productImage img-responsive" src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>" />
-                <% end_with %>
-                <%-- Else render no image text --%>
-            <% else %>
-                <div class="noimage"><%t Product.NoImage "no image" %></div>
-            <% end_if %>
-
-
-            <%--<% if $Image %>--%>
-                <%--<% with $Image.SetRatioSize(620,620) %>--%>
-                    <%--<img class="productImage img-responsive" src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>" />--%>
-                <%--<% end_with %>--%>
-            <%--<% else %>--%>
-                <%--<div class="noimage"><%t Product.NoImage "no image" %></div>--%>
-            <%--<% end_if %>--%>
-
-
             <% if $InternalItemID %><p><%t Product.Code "Product Code" %> : {$InternalItemID}</p><% end_if %>
             <% if $Model %><p><%t Product.Model "Model" %> : $Model.XML</p><% end_if %>
             <% if $Size %><p><%t Product.Size "Size" %> : $Size.XML</p><% end_if %>

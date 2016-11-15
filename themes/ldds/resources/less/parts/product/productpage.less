@@ -33,6 +33,7 @@
   .price {
     padding-top: 30px;
     font-size: 20px;
+    position: relative;
     strong {
       font-weight: 100;
     }
@@ -69,7 +70,7 @@
     }
   }
 
-  #AddProductForm_Form:nth-child(2){
+  #AddProductForm_Form:nth-child(1){
     display:none;
   }
 
@@ -77,4 +78,18 @@
     .btn_centre_out_small();
     margin-top: 15px;
   }
+
+  // Product Details
+  .productDetails {
+    #VariationForm_Form {
+      display: block;
+    }
+  }
+
+  // Variation Form
+  #VariationForm_Form {
+    display: none;
+  }
+
+
 }
