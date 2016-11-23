@@ -11,6 +11,8 @@ function closeNav() {
     $(".fa-bars").removeClass("hamburger-fade");
 }
 
+
+
 // var artpanel = document.getElementById("art-panel");
 // var artpaneltext = document.getElementById("art-panel-text");
 // var designpanel = document.getElementById("designer-panel");

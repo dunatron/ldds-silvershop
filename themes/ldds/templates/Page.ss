@@ -49,10 +49,12 @@
 <script src="$ThemeDir/js/googleajax.js"></script>
 <script src="$ThemeDir/js/bootstrap3.1.0.js"></script>
 <script src="$ThemeDir/js/menu.js"></script>
+<script src="$ThemeDir/js/ajax-message.js"></script>
 <script src="$ThemeDir/js/vertical-slider.js"></script>
 <script src="$ThemeDir/js/base-ajax.js"></script>
 <script src="$ThemeDir/js/billing-same-as-shipping.js"></script>
 <script src="$ThemeDir/js/add-to-cart-message.js"></script>
 <script src="$ThemeDir/js/black-bg.js"></script>
+
 </body>
 </html>
