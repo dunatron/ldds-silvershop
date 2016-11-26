@@ -17,12 +17,16 @@ class ArtHolder extends Page
     {
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Art', GridField::create(
-            'ArtPieces',
-            'Art Pieces for the Art Panel Lucius =)',
-            $this->ArtPieces(),
-            GridFieldConfig_RecordEditor::create()
-        ));
+//        $fields->addFieldToTab('Root.Art', GridField::create(
+//            'ArtPieces',
+//            'Art Pieces for the Art Panel',
+//            $this->ArtPieces(),
+//            GridFieldConfig_RecordEditor::create()
+//        ));
+//
+        $conf=GridFieldConfig_RelationEditor::create(10);
+        $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+        $fields->addFieldToTab('Root.Art', new GridField('ArtPieces', 'ArtPieces', $this->ArtPieces(), $conf));
 
         return $fields;
     }

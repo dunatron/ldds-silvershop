@@ -29,18 +29,26 @@ class DesignerProduct extends Product {
         'SizeChart' => 'Image'
     );
 
-    private static $many_many = array(
-        'DesignerImageSet' => 'Image'
+    private static $has_many = array(
+        'DesignerImageSet' => 'CollectionShoot'
     );
+
 
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.CollectionShoot', $designerImageSet = new UploadField('DesignerImageSet', 'Designer product Image Set'));
+
+        $conf= GridFieldConfig_RelationEditor::create(10);
+        $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+
+        $fields->addFieldToTab('Root.CollectionShoot', new GridField('DesignerImageSet', 'DesignerImageSet', $this->DesignerImageSet(), $conf));
+
+
+//        $fields->addFieldToTab('Root.CollectionShoot', $designerImageSet = new UploadField('DesignerImageSet', 'Designer product Image Set'));
         $fields->addFieldToTab('Root.SizeChart', $sizeChart = new UploadField('SizeChart', 'Size Chart Image'));
-        
-        $designerImageSet->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
-        $designerImageSet->setFolderName('designer-images');
+//
+//        $designerImageSet->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
+//        $designerImageSet->setFolderName('designer-images');
 
         $sizeChart->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
         $sizeChart->setFolderName('Size-Charts');

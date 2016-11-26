@@ -2,21 +2,20 @@
 /**
  * Created by PhpStorm.
  * User: Heath
- * Date: 8/08/16
- * Time: 7:19 PM
+ * Date: 26/11/16
+ * Time: 4:41 PM
  */
-class ArtPiece extends DataObject
+class CollectionShoot extends DataObject
 {
 
     private static $db = array(
         'Title' => 'Varchar(100)',
-        'Description' => 'Text',
         'SortOrder' => 'Int'
     );
 
     private static $has_one = array(
-        'ArtHolder' => 'ArtHolder',
-        'ArtImage' => 'Image'
+        'Parent' => 'DesignerProduct',
+        'ShootImage' => 'Image'
     );
 
     private static $default_sort='SortOrder';
@@ -33,13 +32,12 @@ class ArtPiece extends DataObject
      */
     private static $summary_fields = array(
         'GridThumbnail' => '',
-        'Title' => 'Title of art piece',
-        'Description' => 'description of art piece',
+        'Title' => 'Title of shoot image',
     );
     public function getGridThumbnail()
     {
-        if ($this->ArtImage()->exists()) {
-            return $this->ArtImage()->SetWidth(100);
+        if ($this->ShootImage()->exists()) {
+            return $this->ShootImage()->SetWidth(100);
         }
         return '(no image)';
     }

@@ -12,8 +12,8 @@
             <div class="item<% if $First %> active<% end_if %>">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <% with $Me.SetRatioSize(600,950) %>
-                            <img src="$URL" >
+                        <% with $ShootImage.SetRatioSize(600,950) %>
+                            <img class="img-responsive" src="$URL" width="$Width" height="$Height">
                         <% end_with %>
                         <%--$Me.SetRatioSize(80,80)--%>
                     </div>

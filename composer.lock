@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42a177cf86d4ceba3519268f28317f08",
-    "content-hash": "32b59957fd55f5c75d5087e67c02dfd4",
+    "hash": "081db0fca28f12e584b493e7887f3eb5",
+    "content-hash": "7eb40a2d11feb55b42c8a98cfb9da9be",
     "packages": [
         {
             "name": "betterbrief/silverstripe-googlemapfield",
@@ -1660,6 +1660,46 @@
                 "silverstripe"
             ],
             "time": "2015-12-18 20:44:09"
+        },
+        {
+            "name": "undefinedoffset/sortablegridfield",
+            "version": "0.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UndefinedOffset/SortableGridField.git",
+                "reference": "94e916b4d91c7c0672a138a6c0a5e82a17c69f91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/94e916b4d91c7c0672a138a6c0a5e82a17c69f91",
+                "reference": "94e916b4d91c7c0672a138a6c0a5e82a17c69f91",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/framework": ">=3.0.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "sortablegridfield"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Chipman",
+                    "homepage": "http://www.edchipman.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds drag and drop functionality to SilverStripe 3.0's GridField",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2016-11-24 14:01:29"
         },
         {
             "name": "willdurand/geocoder",
