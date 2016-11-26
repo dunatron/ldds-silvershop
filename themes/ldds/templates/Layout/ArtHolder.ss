@@ -16,7 +16,8 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <%--<button type="button" class="close" data-dismiss="modal">&times;</button>--%>
+                            <img class="close-modal" data-dismiss="modal" aria-hidden="true" src="$ThemeDir/images/svg/cross.svg">
                             <%--<h4 class="modal-title">Modal Header</h4>--%>
                         </div>
                         <div class="modal-body">
