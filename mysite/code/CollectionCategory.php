@@ -13,8 +13,8 @@ class CollectionCategory extends ProductCategory
 
     private static $icon = 'mysite/images/cms/icons/loonie_toons_folder_24.png';
 
-    private static $many_many = array(
-        'CollectionShoot' => 'Image'
+    private static $has_many = array(
+        'CollectionShoot' => 'CategoryShoot'
     );
 
     private static $db = array(
@@ -25,12 +25,18 @@ class CollectionCategory extends ProductCategory
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
+        $conf= GridFieldConfig_RelationEditor::create(10);
+        $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+
+        $fields->addFieldToTab('Root.CollectionShoot', new GridField('CollectionShoot', 'CollectionShoot', $this->CollectionShoot(), $conf));
+
         $fields->addFieldToTab('Root.Main', new DropdownField('CollectionType', 'Collection Type',
             $this->dbobject('CollectionType')->enumValues()), 'URLSegment');
 
-        $fields->addFieldToTab('Root.CollectionShoot', $collectionImage = new UploadField('CollectionShoot', 'Collection Shoot Image'));
-        $collectionImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
-        $collectionImage->setFolderName('Collection');
+//        $fields->addFieldToTab('Root.CollectionShoot', $collectionImage = new UploadField('CollectionShoot', 'Collection Shoot Image'));
+//        $collectionImage->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
+//        $collectionImage->setFolderName('Collection');
 
         return $fields;
     }

@@ -5,7 +5,7 @@
  * Date: 26/11/16
  * Time: 4:41 PM
  */
-class CollectionShoot extends DataObject
+class DesignerShoot extends DataObject
 {
 
     private static $db = array(

@@ -13,7 +13,7 @@
                                 <% if $First %>
                                         <% loop $CollectionShoot %>
                                             <div class="<% if $First%>item active<% else %>item<% end_if %>">
-                                                <% with $Me.CroppedImage(1140,400) %>
+                                                <% with $ShootImage.CroppedImage(1140,400) %>
                                                     <%--<img class="img-responsive" src="$URL" width="$Width" height="$Height">--%>
                                                     <div class="slider-background-images" style="background-image:url('$URL');"></div>
                                                     <style>#preload-01 { background: url($URL) no-repeat -9999px -9999px; }</style>

@@ -5,12 +5,12 @@
  * Date: 21/07/16
  * Time: 12:10 AM
  */
-class LDHolder extends Page
+class BasicsHolder extends Page
 {
     private static $icon = 'mysite/images/cms/icons/folders-icon.jpeg';
 
 }
-class LDHolder_Controller extends Page_Controller
+class BasicsHolder_Controller extends Page_Controller
 {
 
 }

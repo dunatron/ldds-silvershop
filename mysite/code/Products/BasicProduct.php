@@ -3,15 +3,15 @@
  * Created by PhpStorm.
  * User: Heath
  * Date: 20/07/16
- * Time: 5:31 PM
+ * Time: 6:04 PM
  */
-class DesignerProduct extends Product {
+class BasicProduct extends Product {
 
-    private static $singular_name          = "Designer Product";
+    private static $singular_name          = "Cheaper Product";
 
-    private static $plural_name            = "Designer Products";
+    private static $plural_name            = "Cheaper Products";
 
-    private static $icon                   = 'mysite/images/cms/icons/expensive-clothe-icon.png';
+    private static $icon                   = 'mysite/images/cms/icons/cheap-clothe-icon.png';
 
     private static $default_parent         = 'ProductCategory';
 
@@ -25,12 +25,19 @@ class DesignerProduct extends Product {
 
     private static $min_opengraph_img_size = 0;
 
+    private static $can_be_root = false;
+
+    static $defaults = array (
+        'ShowInMenus' => true,
+        'ShowInSearch' => true
+    );
+
     private static $has_one = array(
         'SizeChart' => 'Image'
     );
 
     private static $has_many = array(
-        'DesignerImageSet' => 'DesignerShoot'
+        'BasicImageSet' => 'BasicShoot'
     );
 
 
@@ -41,14 +48,9 @@ class DesignerProduct extends Product {
         $conf= GridFieldConfig_RelationEditor::create(10);
         $conf->addComponent(new GridFieldSortableRows('SortOrder'));
 
-        $fields->addFieldToTab('Root.DesignerShoot', new GridField('DesignerImageSet', 'DesignerImageSet', $this->DesignerImageSet(), $conf));
+        $fields->addFieldToTab('Root.CollectionShoot', new GridField('BasicImageSet', 'BasicImageSet', $this->BasicImageSet(), $conf));
 
-
-//        $fields->addFieldToTab('Root.CollectionShoot', $designerImageSet = new UploadField('DesignerImageSet', 'Designer product Image Set'));
         $fields->addFieldToTab('Root.SizeChart', $sizeChart = new UploadField('SizeChart', 'Size Chart Image'));
-//
-//        $designerImageSet->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
-//        $designerImageSet->setFolderName('designer-images');
 
         $sizeChart->getValidator()->setAllowedExtensions(array('png', 'gif', 'jpg', 'jpeg'));
         $sizeChart->setFolderName('Size-Charts');
@@ -58,6 +60,6 @@ class DesignerProduct extends Product {
 
 }
 
-class DesignerProduct_Controller extends Product_Controller {
+class BasicProduct_Controller extends Product_Controller {
 
 }
