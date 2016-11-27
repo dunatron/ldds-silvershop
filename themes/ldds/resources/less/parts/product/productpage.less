@@ -10,7 +10,7 @@
 
 }
 
-.Product, .designerproduct, .ldproduct {
+.Product, .designerproduct, .ldproduct .basicproduct {
   padding-top: 40px;
   #Sidebar {
     width: 100%;
@@ -27,6 +27,50 @@
     @media @min992 {
       width: 70%;
       padding-right: 30px;
+    }
+    .productContent {
+      font-size: 14px;
+      p {
+        font-size: 14px;
+      }
+
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          position: relative; // note: contain psuedos'
+          // style caption below slider
+          padding-left: 15px;
+          padding-right: 15px;
+          max-width: 550px;
+
+          // make a cross with css psuedos
+          &:before,
+          &:after{
+          .show_psuedo();
+            position: absolute;
+            background-color: @ldds-black;
+          }
+
+          &:before{
+            width: 1px;
+            height: 7px;
+            left: 6px;
+            top: 9px;
+            margin-top: -4px;
+          }
+
+          &:after{
+            width: 7px;
+            height: 1px;
+            left: 3px;
+            top: 9px;
+            margin-top: -1px;
+          }
+        }
+      }
+
+
     }
   }
 
@@ -82,6 +126,11 @@
   // Product Details
   // This is the variation form that displays
   .productDetails {
+
+    #AddProductForm_Form {
+      display: block;
+    }
+
     #VariationForm_Form {
       display: block;
       position: relative;
@@ -150,10 +199,18 @@
     }
   }
 
+
+
+
+
   // Variation Form
   #VariationForm_Form {
     display: none;
   }
+  #AddProductForm_Form {
+    display: none;
+  }
+
 
 
 }

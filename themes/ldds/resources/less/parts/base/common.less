@@ -381,5 +381,45 @@ form {
   background-color: @ldds-black;
 }
 
+.content {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      position: relative; // note: contain psuedos'
+      // style caption below slider
+      padding-left: 15px;
+      padding-right: 15px;
+      max-width: 550px;
+
+      // make a cross with css psuedos
+      &:before,
+      &:after{
+        .show_psuedo();
+        position: absolute;
+        background-color: @ldds-black;
+      }
+
+      &:before{
+        width: 1px;
+        height: 7px;
+        left: 6px;
+        top: 9px;
+        margin-top: -4px;
+      }
+
+      &:after{
+        width: 7px;
+        height: 1px;
+        left: 3px;
+        top: 9px;
+        margin-top: -1px;
+      }
+    }
+  }
+}
+
+
+
 
 

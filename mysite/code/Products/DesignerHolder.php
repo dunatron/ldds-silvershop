@@ -8,6 +8,10 @@
 class DesignerHolder extends Page
 {
     private static $icon = 'mysite/images/cms/icons/folders-icon.jpeg';
+
+    private static $allowed_children = array(
+        'CollectionCategory'
+    );
     
 }
 class DesignerHolder_Controller extends Page_Controller

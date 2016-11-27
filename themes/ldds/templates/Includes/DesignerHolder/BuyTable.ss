@@ -29,7 +29,9 @@
                 </a>
                 <div id="collapseOne-$ID" class="panel-collapse collapse in" role="tabpanel"
                      aria-labelledby="headingOne">
-                    $Content
+                    <div class="content">
+                        $Content
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">

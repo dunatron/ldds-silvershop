@@ -21,6 +21,11 @@ class CollectionCategory extends ProductCategory
         'CollectionType' => "Enum('Designer, Basic', 'Designer')"
     );
 
+    private static $allowed_children = array(
+        'BasicProduct',
+        'DesignerProduct'
+    );
+
     //Getting CMS Fields For our Home slides DataObject
     public function getCMSFields()
     {
