@@ -1,5 +1,4 @@
 <div class="container holder-buffer">
-
     <%-- Loop Collection Categories --%>
     <% loop $Children(1) %>
         <% if $ClassName == 'CollectionCategory' %>
@@ -14,13 +13,8 @@
                         <% include DesignerPanel %>
                         <% include SoldOutModal %>
                     <% end_if %>
-
                 <% end_loop %>
             </div>
-            <div>Title =  $Title</div>
-            <div>ClassName = $ClassName</div>
         <% end_if %>
-
     <% end_loop %>
-
 </div>
