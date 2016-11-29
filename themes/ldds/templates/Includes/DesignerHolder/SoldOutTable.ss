@@ -41,7 +41,9 @@
                     </div>
                 </a>
                 <div id="collapseTwo-$ID" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    $SiteConfig.DesignerPolicy
+                    <div class="content">
+                        $SiteConfig.DesignerPolicy
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">

@@ -8,7 +8,8 @@
             $Price.Nice
         </div>
         <div class="add-product-message">
-            <span>$Title Product has been added to the <a href="{$AbsoluteBaseURL}cart">Cart</a> </span><span class="close-message close">x</span>
+            <span>$Title Product has been added to the <a href="{$AbsoluteBaseURL}cart">Cart</a> </span><span
+                class="close-message close">x</span>
         </div>
         <div class="add-to-cart">
             <a href="$addLink" class="ajax add-product">
@@ -46,7 +47,9 @@
                     </div>
                 </a>
                 <div id="collapseTwo-$ID" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    $SiteConfig.DesignerPolicy
+                    <div class="content">
+                        $SiteConfig.DesignerPolicy
+                    </div>
                 </div>
             </div>
             <div class="panel panel-default">
