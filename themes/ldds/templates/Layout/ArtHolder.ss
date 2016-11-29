@@ -5,7 +5,7 @@
             <div class="art-piece">
                 <%-- Art Image --%>
                 <a href="#" data-toggle="modal" data-target="#art-piece-$ID">
-                    <% with $ArtImage.CroppedImage(585,400) %>
+                    <% with $ArtImage.CroppedImage(283,400) %>
                         <img src="$URL" class="img-responsive">
                     <% end_with %>
                 </a>
