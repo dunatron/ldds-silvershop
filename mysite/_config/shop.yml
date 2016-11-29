@@ -7,7 +7,7 @@ CheckoutConfig:
   membership_required: true
 
 Email:
-  admin_email: example@example.com
+  admin_email: lukedawsondesign@gmail.com
 
 i18n:
   default_locale: en_NZ
@@ -72,14 +72,14 @@ ProductCategory:
 
 ShopConfig:
   base_currency: 'NZD'
-  email_from: sales@myshop.com
+  email_from: lukedawsondesign@gmail.com
   receipt_subject: "Thank you for your order at www.myshop.com - Order #%d"
 
 ShopCurrency:
   decimal_delimiter: '.'
   thousand_delimiter: ','
   # european style currencies, e.g. 45,00 € instead of €45,00
-  append_symbol: true
+  append_symbol: false
 
 ShoppingCart_Controller:
   # Redirect to the cart page after manipulating the shopping cart
@@ -89,9 +89,16 @@ ShoppingCart_Controller:
 
 CheckoutPage:
   steps:
-      membership: 'CheckoutStep_Membership'
       shippingaddress: 'CheckoutStep_AddressBook'
       billingaddress: 'CheckoutStep_AddressBook'
       shippingmethod: 'CheckoutStep_ShippingMethod'
       summary: 'CheckoutStep_Summary'
+
+#CheckoutPage:
+#  steps:
+#      membership: 'CheckoutStep_Membership'
+#      shippingaddress: 'CheckoutStep_AddressBook'
+#      billingaddress: 'CheckoutStep_AddressBook'
+#      shippingmethod: 'CheckoutStep_ShippingMethod'
+#      summary: 'CheckoutStep_Summary'
 

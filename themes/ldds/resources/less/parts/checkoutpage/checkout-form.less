@@ -1,5 +1,121 @@
-#PaymentForm_OrderForm {
+#PaymentForm_OrderForm, #CheckoutForm_ShippingAddressForm, #CheckoutForm_BillingAddressForm, #Form_ShippingMethodForm,
+#PaymentForm_ConfirmationForm {
   padding: 40px 0;
+
+  fieldset {
+    position: static;
+    .field {
+      margin: 10px 0;
+      min-height: 100px;
+      display: inline;
+      float: left;
+      margin: 0 30px 0 0;
+    }
+    ul {
+      li {
+        list-style: katakana;
+      }
+    }
+    input {
+      min-width: 280px;
+      border: 1px solid @ldds-black;
+      border-radius: 0;
+      padding: 5px;
+      height: 50px;
+      font-size: 25px;
+
+    }
+    .dropdown {
+      position: static;
+      display: inline-block;
+      select {
+        min-width: 280px;
+
+        border: 1px solid @ldds-black;
+        border-radius: 0;
+        background: transparent;
+        width: auto;
+        padding: 5px 40px 5px 5px;
+        font-size: 25px;
+        height: 50px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(../images/svg/chevron-thin-down.svg) 96% no-repeat transparent;
+      }
+
+    }
+    .radio {
+      height: 16px;
+      font-size: 25px;
+      min-width: 10px;
+      display: inline-block;
+    }
+    .numeric {
+      display: inline-block;
+      input {
+        min-width: 160px;
+        border: 1px solid @ldds-black;
+        border-radius: 0;
+        padding: 5px;
+      }
+    }
+    .textarea {
+      width: 100%;
+      max-width: 480px;
+      font-size: 25px;
+    }
+
+    .message {
+      position: absolute;
+      background-color: rgba(255,255,255,0.92);
+      top:0;left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      font-size: 22px;
+      padding: 24px 24px;
+      &:before {
+        .show_psuedo();
+        position: absolute;
+        top:0;  right: 0;
+        //background-color: yellow;
+        width: 20px;
+        height: 20px;
+        z-index: 6;
+        background: url(../images/svg/cross.svg) no-repeat transparent;
+      }
+    }
+  }
+
+  #SeperateBilling_Holder {
+    display: inline-table;
+    top:35px;
+    position: relative;
+    input {
+      display: inline-table;
+      position: relative;
+
+      margin-left: 0;
+      height: 16px;
+    }
+  }
+
+  .Actions {
+
+    input {
+      .btn_centre_out();
+      min-width: 160px;
+      margin: 10px 0;
+    }
+
+    #VariationForm_Form_action_addtocart {
+      .btn_centre_out();
+      min-width: 160px;
+      margin: 10px 0;
+    }
+  }
+
 
 
   #PaymentForm_OrderForm_error {
@@ -112,5 +228,10 @@
     .btn_centre_out();
     margin-left: 10px;
   }
+
+}
+
+// Stepped Checkout
+#CheckoutForm_ShippingAddressForm {
 
 }
