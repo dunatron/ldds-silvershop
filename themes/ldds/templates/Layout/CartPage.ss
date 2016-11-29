@@ -4,6 +4,8 @@
 </div>
 <% if $Cart %>
 
+    <% include ShippingEstimator %>
+
     <% if $CartForm %>
         $CartForm
     <% else %>

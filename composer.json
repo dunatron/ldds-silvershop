@@ -17,7 +17,7 @@
 		"silvershop/coloredvariations": "dev-master",
 		"bummzack/silverstripe-omnipay-ui": "^0.1.1",
 		"silvershop/geocoding": "2.0.0",
-		"silvershop/shipping": "0.2.1",
+		"silvershop/shipping": "master",
 		"unclecheese/betterbuttons": "1.2.*",
 		"undefinedoffset/sortablegridfield": "^0.6.5"
 
