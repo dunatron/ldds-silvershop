@@ -10,7 +10,7 @@
             <a href="$SiteConfig.snapchat" id="snapchat-link" target="_blank"><i class="fa fa-snapchat-square" aria-hidden="true"></i></a>
         <% end_if %>
         <div class="site-name">
-            <p class="text-center">www.lukedawson.co.nz</p>
+            <p class="text-center" style="margin-top: 10px;">www.lukedawson.co.nz</p>
         </div>
     </div>
 
