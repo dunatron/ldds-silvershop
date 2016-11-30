@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80cc51b483934979fa1f27948c82ee0d",
-    "content-hash": "a9101f2d4161b2c22ddfbb209444b793",
+    "hash": "c7ee1b21de4e3b08b53b1ae21b618e70",
+    "content-hash": "89b6f11135c53cc93470bf363cf9b916",
     "packages": [
         {
             "name": "betterbrief/silverstripe-googlemapfield",
@@ -1271,6 +1271,46 @@
                 "silverstripe"
             ],
             "time": "2016-06-02 22:59:29"
+        },
+        {
+            "name": "silverstripe/googlesitemaps",
+            "version": "1.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wilr/silverstripe-googlesitemaps.git",
+                "reference": "31f9182e95837ba42ca9374e0f5638c3ca8a88c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wilr/silverstripe-googlesitemaps/zipball/31f9182e95837ba42ca9374e0f5638c3ca8a88c9",
+                "reference": "31f9182e95837ba42ca9374e0f5638c3ca8a88c9",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "googlesitemaps"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "SilverStripe support for the Google Sitemaps XML, enabling Google and other search engines to see all urls on your site. This helps your SilverStripe website rank well in search engines, and to encourage the information on your site to be discovered by Google quickly.",
+            "homepage": "https://github.com/wilr/silverstripe-googlesitemaps",
+            "keywords": [
+                "googlesitemaps",
+                "seo",
+                "silverstripe"
+            ],
+            "time": "2016-09-12 00:10:42"
         },
         {
             "name": "silverstripe/reports",
