@@ -14,8 +14,8 @@ i18n:
 
 Order:
   modifiers:
-    - 'SimpleShippingModifier'
-    - 'FlatTaxModifier'
+     - ShippingFrameworkModifier
+     - FlatTaxModifier
   cancel_before_payment: false
   cancel_before_processing: false
   cancel_before_sending: false
