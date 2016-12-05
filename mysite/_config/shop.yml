@@ -88,6 +88,7 @@ ShoppingCart_Controller:
 
 CheckoutPage:
   steps:
+      contactdetails: 'CheckoutStep_ContactDetails'
       shippingaddress: 'CheckoutStep_AddressBook'
       billingaddress: 'CheckoutStep_AddressBook'
       shippingmethod: 'CheckoutStep_ShippingMethod'
