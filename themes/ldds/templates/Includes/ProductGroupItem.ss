@@ -3,7 +3,7 @@
         <a href="$Link" title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$Title %>">
             <div class="img-wrapper">
 
-                <% with $Image.CroppedImage(270, 180) %>
+                <% with $Image.FocusFill(270, 180) %>
                     <img src="$URL" alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>"/>
                 <% end_with %>
             </div>

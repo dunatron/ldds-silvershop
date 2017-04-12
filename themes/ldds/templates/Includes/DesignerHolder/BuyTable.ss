@@ -66,7 +66,7 @@
                 <div id="collapseThree-$ID" class="panel-collapse collapse" role="tabpanel"
                      aria-labelledby="headingThree">
                     <% with $SizeChart %>
-                        $Me.SetRatioSize(460, 500)
+                        $Me.FocusFill(460, 500)
                         <%--<img src="$URL">--%>
                     <% end_with %>
                 </div>

@@ -5,7 +5,7 @@
             <div class="art-piece">
                 <%-- Art Image --%>
                 <a href="#" data-toggle="modal" data-target="#art-piece-$ID">
-                    <% with $ArtImage.CroppedImage(283,400) %>
+                    <% with $ArtImage.FocusFill(283,400) %>
                         <img src="$URL" class="img-responsive">
                     <% end_with %>
                 </a>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="large-art-image-holder">
-                                <% with $ArtImage.SetRatioSize(1200,800) %>
+                                <% with $ArtImage.FocusFill(1200,800) %>
                                     <img src="$URL" class="img-responsive">
                                 <% end_with %>
                             </div>

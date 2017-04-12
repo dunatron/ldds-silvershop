@@ -9,7 +9,7 @@
             <% include ProductSlider %>
             <%-- else if $Image --%>
         <% else_if $Image %>
-            <% with $Image.SetRatioSize(620,620) %>
+            <% with $Image.FocusFill(620,620) %>
                 <img class="productImage img-responsive" src="$URL"
                      alt="<%t Product.ImageAltText "{Title} image" Title=$Title %>"/>
             <% end_with %>

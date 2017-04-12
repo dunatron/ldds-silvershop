@@ -11,7 +11,7 @@
                                 <div class="image">
                                     <a href="$Link"
                                        title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$TableTitle %>">
-                                        $Image.SetRatioSize(180, 220)
+                                        $Image.FocusFill(180, 220)
                                     </a>
                                 </div>
                             <% end_if %>

@@ -15,7 +15,6 @@
                         <%--<% with $ShootImage.SetRatioSize(600,950) %>--%>
                             <%--<img class="img-responsive" src="$URL" width="$Width" height="$Height">--%>
                         <%--<% end_with %>--%>
-                        <!-- Heath Test -->
                         <% with $ShootImage.FocusFill(600,950) %>
                             <img class="img-responsive" src="$URL" width="$Width" height="$Height">
                         <% end_with %>
