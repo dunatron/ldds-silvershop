@@ -5,7 +5,10 @@
             <div class="dark-overlay"></div>
             <div class="title">$Title</div>
             <div class="price">$Price</div>
-            <% with $Image.CroppedImage(300, 400) %>
+            <%--<% with $Image.CroppedImage(300, 400) %>--%>
+                <%--<img class="img-responsive" src="$URL" width="$Width" height="$Height">--%>
+            <%--<% end_with %>--%>
+            <% with $Image.FocusFill(300, 400) %>
                 <img class="img-responsive" src="$URL" width="$Width" height="$Height">
             <% end_with %>
         </a>
