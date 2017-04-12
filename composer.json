@@ -20,7 +20,8 @@
 		"silvershop/shipping": "master",
 		"unclecheese/betterbuttons": "1.2.*",
 		"undefinedoffset/sortablegridfield": "^0.6.5",
-		"silverstripe/googlesitemaps": "^1.5"
+		"silverstripe/googlesitemaps": "^1.5",
+		"jonom/focuspoint": "^2.4"
 
 	},
 	"require-dev": {
