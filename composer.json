@@ -21,7 +21,8 @@
 		"unclecheese/betterbuttons": "1.2.*",
 		"undefinedoffset/sortablegridfield": "^0.6.5",
 		"silverstripe/googlesitemaps": "^1.5",
-		"jonom/focuspoint": "^2.4"
+		"jonom/focuspoint": "^2.4",
+		"silvershop/discounts": "dev-master"
 
 	},
 	"require-dev": {

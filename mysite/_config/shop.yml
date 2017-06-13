@@ -15,6 +15,7 @@ i18n:
 Order:
   modifiers:
      - ShippingFrameworkModifier
+     - OrderDiscountModifier
   cancel_before_payment: false
   cancel_before_processing: false
   cancel_before_sending: false
@@ -44,6 +45,8 @@ OrderManipulation:
 #  send_admin_notification: true  # copy to admin
 
 Product:
+  extensions:
+    - SpecificPricingExtension
   global_allow_purchase: false
   # length_unit: 'M'
   # weight_unit: 'Pounds'
@@ -86,12 +89,17 @@ ShoppingCart_Controller:
   # disable security token for cart-links
   disable_security_token: true
 
+ProductVariation:
+  extensions:
+    - SpecificPricingExtension
+
 CheckoutPage:
   steps:
       contactdetails: 'CheckoutStep_ContactDetails'
       shippingaddress: 'CheckoutStep_AddressBook'
       billingaddress: 'CheckoutStep_AddressBook'
       shippingmethod: 'CheckoutStep_ShippingMethod'
+      discount : 'CheckoutStep_Discount'
       summary: 'CheckoutStep_Summary'
 
 #CheckoutPage:
