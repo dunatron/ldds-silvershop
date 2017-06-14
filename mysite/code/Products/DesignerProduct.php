@@ -56,8 +56,27 @@ class DesignerProduct extends Product {
         return $fields;
     }
 
+    public function TestDiscounts()
+    {
+        $discounts = OrderDiscount::get();
+
+        foreach ($discounts as $d) {
+            $item = $d->OrderItems();
+            error_log(var_export($item, true));
+
+            // foreach ($item as $i) {
+            //     error_log(var_export($i, true));
+            //}
+        }
+
+        //error_log(var_export($discounts, true));
+
+        return $discounts;
+    }
+
 }
 
 class DesignerProduct_Controller extends Product_Controller {
+
 
 }

@@ -46,6 +46,57 @@ class CollectionCategory extends ProductCategory
         return $fields;
     }
 
+/*
+    public function getCollectionDiscount()
+    {
+        $DiscountID = Null;
+        $discounts = Discount::get()->filter(array(
+            'EndDate:GreaterThan' => date('Y-m-d').' 00:00:00',
+            'StartDate:LessThan' => date('Y-m-d').' 23:59:59'
+        ));
+         foreach ($discounts as $discount) {
+             $categories = $discount->Categories()->filter(array(
+                'ProductCategoryID' => $this->ID
+            ))->first();
+
+             //$main = $categories->first();
+             error_log(var_export($categories, true));
+
+         }
+        
+        return $discounts;
+    }
+    */
+
+    public function getCollectionDiscount()
+    {
+        //ORDER BY column1, column2, ... ASC|DESC
+
+        $MainDiscountID = Null;
+
+ $sql = "SELECT Discount.ID
+FROM Discount
+INNER JOIN `Discount_Categories` ON Discount.ID = Discount_Categories.DiscountID
+WHERE Discount.StartDate >= '2015-06-01 00:00:00' AND Discount.EndDate <= '2018-06-12 00:00:00' AND ProductCategoryID = ".$this->ID."
+ORDER BY Discount.LastEdited DESC;";
+
+$result = DB::query($sql)->value();
+error_log(var_export($result, true));
+
+$Discount = Discount::get()->byID($result);
+
+
+return $Discount;
+
+
+        /*
+        SELECT *
+FROM Discount
+INNER JOIN `Discount_Categories` ON Discount.ID = Discount_Categories.DiscountID
+WHERE Discount.StartDate >= '2017-06-01 00:00:00' AND Discount.EndDate <= '2018-06-12 00:00:00' AND ProductCategoryID = 27;
+        */
+    }
+
 }
 
 class CollectionCategory_Controller extends ProductCategory_Controller

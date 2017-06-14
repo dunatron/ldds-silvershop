@@ -66,6 +66,8 @@ Product_Image:
   large_image_width: 200
 
 ProductCategory:
+  modifiers:
+    - OrderDiscountModifier
   include_child_groups: true
   must_have_price: true
   sort_options:

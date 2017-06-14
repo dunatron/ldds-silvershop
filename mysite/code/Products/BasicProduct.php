@@ -37,7 +37,7 @@ class BasicProduct extends Product {
     );
 
     private static $has_many = array(
-        'BasicImageSet' => 'BasicShoot'
+        'BasicImageSet' => 'BasicShoot', 
     );
 
 

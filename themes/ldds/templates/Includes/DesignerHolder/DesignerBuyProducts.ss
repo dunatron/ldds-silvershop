@@ -4,6 +4,14 @@
         <% if $Children %>
             <% loop $Children %>
                 <%--<h1 class="collection-title">$Title</h1>--%>
+
+                <% if $getCollectionDiscount %>
+                     <% with $getCollectionDiscount %>
+                        $Title
+                        $getDiscountNice OFF all Products in this collection
+                    <% end_with %>
+                <% end_if %>
+              
                 <%-- ProductCategory Loop --%>
                 <% if $ClassName = 'CollectionCategory' %>
                     <% if $First %>
