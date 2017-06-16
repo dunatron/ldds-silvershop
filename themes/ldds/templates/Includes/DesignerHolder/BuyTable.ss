@@ -5,7 +5,12 @@
             $Title
         </div>
         <div class="product-price">
-            $Price.Nice
+            <%--$Price.Nice--%>
+            <% if $Parent.getCollectionDiscount %>
+                Was <s>$Price</s> Now ${$SalePrice($Price, $Parent.getCollectionDiscount.getDiscountValue($getPrice))}
+            <% else %>
+                $Price.Nice
+            <% end_if %>
         </div>
         <div class="add-product-message">
             <span>$Title Product has been added to the <a href="{$AbsoluteBaseURL}cart">Cart</a> </span><span

@@ -1,7 +1,11 @@
 <% require css("silvershop/css/account.css") %>
 <% require themedCSS("shop") %>
 <% require themedCSS("account") %>
-<% include AccountNavigation %>
+
+<div class="container">
+    <% include AccountNavigation %>
+</div>
+
 <div class="container holder-buffer">
     $Content
     <h2 class="pagetitle"><%t AccountPage.PastOrders 'Past Orders' %></h2>
