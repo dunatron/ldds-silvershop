@@ -96,12 +96,13 @@ class GridFieldAddNewMultiClass implements GridField_HTMLProvider, GridField_URL
 		foreach($classes as $class => $title) {
 			if(!is_string($class)) {
 				$class = $title;
-				$is_abstract = (($reflection = new ReflectionClass($class)) && $reflection->isAbstract());
-				if (!$is_abstract) {
-					$title = singleton($class)->i18n_singular_name();
-				}
-			} else {
-				$is_abstract = (($reflection = new ReflectionClass($class)) && $reflection->isAbstract());
+			}
+			if (!class_exists($class)) {
+				continue;
+			}
+			$is_abstract = (($reflection = new ReflectionClass($class)) && $reflection->isAbstract());
+			if (!$is_abstract && $class === $title) {
+				$title = singleton($class)->i18n_singular_name();
 			}
 
 			if ($ancestor_to_hide = Config::inst()->get($class, 'hide_ancestor', Config::FIRST_SET)) {
@@ -187,7 +188,8 @@ class GridFieldAddNewMultiClass implements GridField_HTMLProvider, GridField_URL
 
 		GridFieldExtensions::include_requirements();
 
-		$field = new DropdownField(sprintf('%s[ClassName]', __CLASS__), '', $classes, $this->defaultClass);
+
+		$field = new DropdownField(sprintf('%s[%s]', __CLASS__, $grid->getName()), '', $classes, $this->defaultClass);
 		if (Config::inst()->get('GridFieldAddNewMultiClass', 'showEmptyString')) {
 			$field->setEmptyString(_t('GridFieldExtensions.SELECTTYPETOCREATE', '(Select type to create)'));
 		}

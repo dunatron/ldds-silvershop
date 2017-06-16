@@ -97,6 +97,14 @@ WHERE Discount.StartDate >= '2017-06-01 00:00:00' AND Discount.EndDate <= '2018-
         */
     }
 
+
+    public function NewProductPrice()
+    {
+        $discount = $this->getCollectionDiscount();
+
+        return $discount;
+    }
+
 }
 
 class CollectionCategory_Controller extends ProductCategory_Controller

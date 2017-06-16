@@ -1,0 +1,17 @@
+---
+Name: focuspoint
+After: 'framework/*','cms/*'
+---
+Image:
+  extensions:
+    - FocusPointImage
+
+#FocusPointField:
+#  debug: true
+#  max_width: 500
+#  max_height: 300
+#Injector:
+#  ImagickBackend:
+#    class: "FPImagickBackend"
+#  Image:
+#    class: FPImage

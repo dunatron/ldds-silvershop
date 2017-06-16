@@ -1,5 +1,33 @@
 # Change Log
 
+## [0.6.9](https://github.com/UndefinedOffset/SortableGridField/tree/0.6.9) (2017-04-21)
+[Full Changelog](https://github.com/UndefinedOffset/SortableGridField/compare/0.6.8...0.6.9)
+
+**Fixed bugs:**
+
+- Query errors when sorted field is on a relation and appending to top [\#101](https://github.com/UndefinedOffset/SortableGridField/issues/101)
+
+## [0.6.8](https://github.com/UndefinedOffset/SortableGridField/tree/0.6.8) (2017-04-18)
+[Full Changelog](https://github.com/UndefinedOffset/SortableGridField/compare/0.6.7...0.6.8)
+
+**Closed issues:**
+
+- Typo error [\#100](https://github.com/UndefinedOffset/SortableGridField/issues/100)
+
+## [0.6.7](https://github.com/UndefinedOffset/SortableGridField/tree/0.6.7) (2017-04-13)
+[Full Changelog](https://github.com/UndefinedOffset/SortableGridField/compare/0.6.6...0.6.7)
+
+**Closed issues:**
+
+- Wrong sort field type check [\#99](https://github.com/UndefinedOffset/SortableGridField/issues/99)
+
+## [0.6.6](https://github.com/UndefinedOffset/SortableGridField/tree/0.6.6) (2017-04-12)
+[Full Changelog](https://github.com/UndefinedOffset/SortableGridField/compare/0.6.5...0.6.6)
+
+**Closed issues:**
+
+- Not working with SS3.5 fresh install  [\#98](https://github.com/UndefinedOffset/SortableGridField/issues/98)
+
 ## [0.6.5](https://github.com/UndefinedOffset/SortableGridField/tree/0.6.5) (2016-11-24)
 [Full Changelog](https://github.com/UndefinedOffset/SortableGridField/compare/0.6.4...0.6.5)
 

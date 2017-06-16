@@ -122,7 +122,6 @@ class GridFieldSortableRows implements GridField_HTMLProvider, GridField_ActionP
 			return $dataList->sort($headerState->SortColumn, $headerState->SortDirection);
 		}
 		
-        //var_dump($state->sortableToggle);exit;
 		if ($state->sortableToggle === true) {
 			$gridField->getConfig()->removeComponentsByType('GridFieldFilterHeader');
 			$gridField->getConfig()->removeComponentsByType('GridFieldSortableHeader');
@@ -190,7 +189,7 @@ class GridFieldSortableRows implements GridField_HTMLProvider, GridField_ActionP
 		if (!$many_many) {
 			$sng=singleton($gridField->getModelClass());
 			$fieldType=$sng->db($this->sortColumn);
-			if(!$fieldType || !(strtolower($fieldType) == 'int' || is_subclass_of('Int', $fieldType))) {
+			if(!$fieldType || !(strtolower($fieldType) == 'int' || is_subclass_of($fieldType, 'Int'))) {
 				if(is_array($fieldType)) {
 					user_error('Sort column '.$this->sortColumn.' could not be found in '.$gridField->getModelClass().'\'s ancestry', E_USER_ERROR);
 				}else {
@@ -280,21 +279,10 @@ class GridFieldSortableRows implements GridField_HTMLProvider, GridField_ActionP
 							. '" SET "' . $sortColumn . '" = "' . $sortColumn .'"+1'
 							. ' WHERE '.($list instanceof RelationList ? '"' . $list->foreignKey . '" = '. $owner->ID:$idCondition) . (!empty($topIncremented) ? ' AND "ID" NOT IN(\''.implode('\',\'', $topIncremented).'\')':''));
 					
-					//LastEdited
-					DB::query('UPDATE "' . $baseDataClass
-							. '" SET "LastEdited" = \'' . date('Y-m-d H:i:s') . '\''
-							. ' WHERE '.($list instanceof RelationList ? '"' . $list->foreignKey . '" = '. $owner->ID:$idCondition) . (!empty($topIncremented) ? ' AND "ID" NOT IN(\''.implode('\',\'', $topIncremented).'\')':''));
-					
 					if($this->update_versioned_stage && class_exists($table) && Object::has_extension($table, 'Versioned')) {
 						DB::query('UPDATE "' . $table . '_' . $this->update_versioned_stage
 								. '" SET "' . $sortColumn . '" = "' . $sortColumn .'"+1'
 								. ' WHERE '. ($list instanceof RelationList ? '"' . $list->foreignKey . '" = '. $owner->ID:$idCondition) . (!empty($topIncremented) ? ' AND "ID" NOT IN(\''.implode('\',\'', $topIncremented).'\')':''));
-						
-						if(Object::has_extension($baseDataClass, 'Versioned')) {
-							DB::query('UPDATE "' . $baseDataClass . '_' . $this->update_versioned_stage
-									. '" SET "LastEdited" = \'' . date('Y-m-d H:i:s') . '\''
-									. ' WHERE ' . ($list instanceof RelationList ? '"' . $list->foreignKey . '" = '. $owner->ID:$idCondition) . (!empty($topIncremented) ? ' AND "ID" NOT IN(\''.implode('\',\'', $topIncremented).'\')':''));
-						}
 					}
 					
 					$topIncremented[]=$obj->ID;
@@ -322,6 +310,19 @@ class GridFieldSortableRows implements GridField_HTMLProvider, GridField_ActionP
 				}
 				
 				$i++;
+			}
+			
+			//Update LastEdited for affected records when using append to top on a many_many relationship
+			if(!$many_many && $this->append_to_top && count($topIncremented)>0) {
+				DB::query('UPDATE "' . $baseDataClass
+						. '" SET "LastEdited" = \'' . date('Y-m-d H:i:s') . '\''
+						. ' WHERE "ID" IN(\''.implode('\',\'', $topIncremented).'\')');
+				
+				if($this->update_versioned_stage && class_exists($table) && Object::has_extension($table, 'Versioned') && Object::has_extension($baseDataClass, 'Versioned')) {
+					DB::query('UPDATE "' . $baseDataClass . '_' . $this->update_versioned_stage
+							. '" SET "LastEdited" = \'' . date('Y-m-d H:i:s') . '\''
+							. ' WHERE "ID" IN(\''.implode('\',\'', $topIncremented).'\')');
+				}
 			}
 			
 			
@@ -559,7 +560,7 @@ class GridFieldSortableRows implements GridField_HTMLProvider, GridField_ActionP
 			$table=false;
 			$classes=ClassInfo::ancestry($className, true);
 			foreach($classes as $class) {
-				$db = Config::inst()->get($className, "db", CONFIG::UNINHERITED);
+				$db = Config::inst()->get($class, "db", CONFIG::UNINHERITED);
 				if(!empty($db) && array_key_exists($sortColumn, $db)) {
 					$table=$class;
 					break;

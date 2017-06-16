@@ -143,7 +143,7 @@ class GridFieldOrderableRows extends RequestHandler implements
 	 * @param DataList $list
 	 * @return string
 	 */
-	public function getSortTable(DataList $list) {
+	public function getSortTable(SS_List $list) {
 		$field = $this->getSortField();
 
 		if($list instanceof ManyManyList) {
@@ -219,7 +219,7 @@ class GridFieldOrderableRows extends RequestHandler implements
 	}
 
 	public function getColumnMetadata($grid, $col) {
-		if ($fieldLabels = singleton($grid->list->dataClass)->fieldLabels()) {
+		if ($fieldLabels = singleton($grid->getModelClass())->fieldLabels()) {
 			return array('title' => isset($fieldLabels['Reorder']) ? $fieldLabels['Reorder'] : '');
 		}
 
@@ -291,6 +291,7 @@ class GridFieldOrderableRows extends RequestHandler implements
 			$this->httpError(400);
 		}
 
+		Controller::curr()->getResponse()->addHeader('X-Status', rawurlencode('Records reordered.'));
 		return $grid->FieldHolder();
 	}
 
@@ -467,7 +468,16 @@ class GridFieldOrderableRows extends RequestHandler implements
 		// match to order the objects.
 		if (!$isVersioned) {
 			$sortTable = $this->getSortTable($list);
-			$additionalSQL = (!$list instanceof ManyManyList) ? ', "LastEdited" = NOW()' : '';
+			$additionalSQL = '';
+			$baseTable = $sortTable;
+			if(class_exists($sortTable)) {
+				$baseTable = singleton($sortTable)->baseTable();
+			}
+			$isBaseTable = ($baseTable == $sortTable);
+			if(!$list instanceof ManyManyList && $isBaseTable){
+				$additionalSQL = ', "LastEdited" = NOW()';
+			}
+
 			foreach($sortedIDs as $sortValue => $id) {
 				if($map[$id] != $sortValue) {
 					DB::query(sprintf(
@@ -478,6 +488,14 @@ class GridFieldOrderableRows extends RequestHandler implements
 						$additionalSQL,
 						$this->getSortTableClauseForIds($list, $id)
 					));
+
+					if(!$isBaseTable) {
+						DB::query(sprintf(
+							'UPDATE "%s" SET "LastEdited" = NOW() WHERE %s',
+							$baseTable,
+							$this->getSortTableClauseForIds($list, $id)
+						));
+					}
 				}
 			}
 		} else {
@@ -502,7 +520,16 @@ class GridFieldOrderableRows extends RequestHandler implements
 		$field  = $this->getSortField();
 		$table  = $this->getSortTable($list);
 		$clause = sprintf('"%s"."%s" = 0', $table, $this->getSortField());
-		$additionalSQL = (!$list instanceof ManyManyList) ? ', "LastEdited" = NOW()' : '';
+
+		$additionalSQL = '';
+		$baseTable = $table;
+		if(class_exists($table)) {
+			$baseTable = singleton($table)->baseTable();
+		}
+		$isBaseTable = ($baseTable == $table);
+		if(!$list instanceof ManyManyList && $isBaseTable){
+			$additionalSQL = ', "LastEdited" = NOW()';
+		}
 
 		foreach($list->where($clause)->column('ID') as $id) {
 			$max = DB::query(sprintf('SELECT MAX("%s") + 1 FROM "%s"', $field, $table));
@@ -516,6 +543,14 @@ class GridFieldOrderableRows extends RequestHandler implements
 				$additionalSQL,
 				$this->getSortTableClauseForIds($list, $id)
 			));
+
+			if(!$isBaseTable) {
+				DB::query(sprintf(
+					'UPDATE "%s" SET "LastEdited" = NOW() WHERE %s',
+					$baseTable,
+					$this->getSortTableClauseForIds($list, $id)
+				));
+			}
 		}
 	}
 

@@ -64,6 +64,7 @@ class DesignerProduct extends Product {
             $item = $d->OrderItems();
             error_log(var_export($item, true));
 
+
             // foreach ($item as $i) {
             //     error_log(var_export($i, true));
             //}
@@ -72,6 +73,20 @@ class DesignerProduct extends Product {
         //error_log(var_export($discounts, true));
 
         return $discounts;
+    }
+
+    public function TheTestPrice()
+    {
+        return 500;
+    }
+
+    public function SalePrice($originalPrice, $amountOff)
+    {
+        $origPrice = floatval(ltrim($originalPrice, '$'));
+
+        $origPrice -= $amountOff;
+
+        return $origPrice;
     }
 
 }
