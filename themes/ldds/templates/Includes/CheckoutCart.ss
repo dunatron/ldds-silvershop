@@ -1,6 +1,17 @@
 <% require themedCSS(cart,shop) %>
 <% if $Items %>
     <div class="Checkout-products-wrapper">
+
+        <% if CurrentMember %>
+        <p><a class="menu-item menu-item-logout" href="Security/logout"><span class="icon"></span>Log-in </a>as someone else</p>
+        <% else %>
+        <p><a class="menu-item menu-item-logout" href="Security/login">Login <span class="icon"></span>
+            </a>
+            OR
+            <a class="menu-item menu-item-logout" href="register/">Register <span class="icon"></span></a></p>
+        <% end_if %>
+
+
         <% loop $Items %>
             <div class="product-wrapper $EvenOdd <% if $Last %>Last<% end_if %>">
                 <% if $ShowInTable %>

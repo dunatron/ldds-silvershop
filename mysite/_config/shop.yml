@@ -102,7 +102,7 @@ CheckoutPage:
       shippingaddress: 'CheckoutStep_AddressBook'
       billingaddress: 'CheckoutStep_AddressBook'
       shippingmethod: 'CheckoutStep_ShippingMethod'
-      discount : 'CheckoutStep_Discount'
+#      discount : 'CheckoutStep_Discount'
       summary: 'CheckoutStep_Summary'
 
 #CheckoutPage:
