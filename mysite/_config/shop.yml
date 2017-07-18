@@ -47,6 +47,7 @@ OrderManipulation:
 Product:
   extensions:
     - SpecificPricingExtension
+    - LddsProductExtension
   global_allow_purchase: false
   # length_unit: 'M'
   # weight_unit: 'Pounds'

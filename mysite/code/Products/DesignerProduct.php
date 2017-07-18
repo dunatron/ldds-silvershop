@@ -56,48 +56,6 @@ class DesignerProduct extends Product {
         return $fields;
     }
 
-    public function TestDiscounts()
-    {
-        $discounts = OrderDiscount::get();
-
-        foreach ($discounts as $d) {
-            $item = $d->OrderItems();
-            error_log(var_export($item, true));
-
-
-            // foreach ($item as $i) {
-            //     error_log(var_export($i, true));
-            //}
-        }
-
-        //error_log(var_export($discounts, true));
-
-        return $discounts;
-    }
-
-    public function TheTestPrice()
-    {
-        return 500;
-    }
-
-    public function SalePrice($originalPrice, $amountOff)
-    {
-        
-        //var_dump('Here item ==============================');
-        //var_dump('$originalPrice');
-        //var_dump('$amountOff'.$amountOff);
-        $origPrice = floatval(ltrim($originalPrice, '$'));
-        //var_dump('$origPrice'.$origPrice);
-
-        $origPrice -= $amountOff;
-        
-        //var_dump('after calc', true));
-
-        //var_dump('$origPrice'.$origPrice);
-
-        return $origPrice;
-    }
-
 }
 
 class DesignerProduct_Controller extends Product_Controller {

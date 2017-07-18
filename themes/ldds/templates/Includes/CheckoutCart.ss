@@ -65,10 +65,10 @@
                                 <a href="$Link"
                                    title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$TableTitle %>">$TableTitle</a>
                             <% else %>
-                                $TableTitle
+                                <p>$TableTitle - $TableValue.Nice</p>
                             <% end_if %>
 
-                            $TableValue.Nice
+                            <%--$TableValue.Nice--%>
                             <% if $Up.Editable %>
                                 <td>
                                     <% if $CanRemove %>
@@ -90,7 +90,7 @@
                 <% end_if %>
 
                 <div class="Total-cart-price">
-                    $Total.Nice $Currency
+                    Total $Total.Nice $Currency
                 </div>
 
             <% end_if %>

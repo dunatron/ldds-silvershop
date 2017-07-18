@@ -56,10 +56,47 @@
                 </div>
             <% end_if %>
         <% end_loop %>
+
+        <%--<% if $Editable %><td>&nbsp;</td><% end_if %>--%>
+        <% if $Modifiers %>
+            <% loop $Modifiers %>
+                <% if $ShowInTable %>
+                    <% if $Link %>
+                        <a href="$Link"
+                           title="<%t Shop.ReadMoreTitle "Click here to read more on &quot;{Title}&quot;" Title=$TableTitle %>">$TableTitle</a>
+                    <% else %>
+                        <h1>$TableTitle - $TableValue.Nice</h1>
+                    <% end_if %>
+
+                    <% if $Up.Editable %>
+                        <td>
+                            <% if $CanRemove %>
+                                <strong>
+                                    <a class="ajaxQuantityLink" href="$removeLink"
+                                       title="<%t ShoppingCart.RemoveTitle "Remove &quot;{Title}&quot; from your cart." Title=$TableTitle %>">
+                                        <img src="silvershop/images/remove.gif" alt="x"/>
+                                    </a>
+                                </strong>
+                            <% end_if %>
+                        </td>
+                    <% end_if %>
+                    <% if $Form %>
+                        $Form
+
+                    <% end_if %>
+                <% end_if %>
+            <% end_loop %>
+        <% end_if %>
+
+        <%--<div class="Total-cart-price">--%>
+            <%--$Total.Nice $Currency--%>
+        <%--</div>--%>
+
+
         <div class="cart-footer">
             <div class="subtotal">
                 <th colspan="4" scope="row"><%t Order.SubTotal "Sub-total" %></th>
-                <td id="$TableSubTotalID">$SubTotal.Nice</td>
+                <td id="$TableSubTotalID">$Total.Nice $Currency</td>
                 <% if $Editable %>
                     <td>&nbsp;</td><% end_if %>
             </div>
