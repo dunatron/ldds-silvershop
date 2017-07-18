@@ -82,9 +82,18 @@ class DesignerProduct extends Product {
 
     public function SalePrice($originalPrice, $amountOff)
     {
+        
+        error_log(var_export('Here item ==============================', true));
+        error_log(var_export('$originalPrice'.$originalPrice, true));
+        error_log(var_export('$amountOff'.$amountOff, true));
         $origPrice = floatval(ltrim($originalPrice, '$'));
+        error_log(var_export('$origPrice'.$origPrice, true));
 
         $origPrice -= $amountOff;
+        
+        error_log(var_export('after calc', true));
+
+        error_log(var_export('$origPrice'.$origPrice, true));
 
         return $origPrice;
     }
