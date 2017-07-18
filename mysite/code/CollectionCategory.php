@@ -77,7 +77,7 @@ class CollectionCategory extends ProductCategory
  $sql = "SELECT Discount.ID
 FROM Discount
 INNER JOIN `Discount_Categories` ON Discount.ID = Discount_Categories.DiscountID
-WHERE Discount.StartDate >= '2015-06-01 00:00:00' AND Discount.EndDate <= '2018-06-12 00:00:00' AND ProductCategoryID = ".$this->ID."
+WHERE Discount.StartDate <= NOW() AND Discount.EndDate >= NOW() AND ProductCategoryID = ".$this->ID."
 ORDER BY Discount.LastEdited DESC;";
 
 $result = DB::query($sql)->value();
